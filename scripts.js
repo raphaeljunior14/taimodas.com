@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: 14,
             nome: "mini bolsa ",
             categoria: "bolsas",
-            preco: 79.90,
+            preco: 89.90,
             tamanho: "Padrao",
             imagem:
                 "./assets/mini bolsas .jpg",
@@ -179,7 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: 15,
             nome: "mini bolsa ",
             categoria: "bolsas",
-            preco: 79.90,
+            preco: 89.90,
             tamanho: "padrao",
             imagem:
                 "./assets/bolsa-mini.jpeg",

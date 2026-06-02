@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
             id: 13,
-            nome: "Saia mini suede",
+            nome: "Saia mini suede ",
             categoria: "vestidos",
             preco: 169.90,
             tamanho: "veste (tamanho unico)",

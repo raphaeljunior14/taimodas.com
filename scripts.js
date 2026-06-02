@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
             preco: 169.90,
             tamanho: "veste (tamanho unico)",
             imagem:
-                "./assets/saia mini suede.jpg",
+                "./assets/Saia mini suede.jpg",
             descricao: "Areia,marrom,Preta",
         },
         {

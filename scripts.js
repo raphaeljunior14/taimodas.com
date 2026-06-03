@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
             preco: 249.90,
             tamanho: "Tamanho 38,40,42",
             imagem:
-                "./assets/calca jeans blue.jpg",
+                "./assets/Calca jeans blue.jpg",
             descricao: "Azul",
         },
 
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
             preco: 199.90,
             tamanho: "M, G, GG",
             imagem:
-                "./assets/vestido em couro PU.jpg",
+                "./assets/Vestido em couro PU.jpg",
             descricao: "Azul marinho,verde militar,preto",
         },
 
@@ -90,10 +90,10 @@ document.addEventListener("DOMContentLoaded", () => {
             nome: "Vestido longo",
             categoria: "Vestidos",
             preco: 219.90,
-            tamanho: "tamanho unico 34 ao 42",
+            tamanho: "Tamanho unico 34 ao 42",
             imagem:
                 "./assets/Vestido longo.jpeg",
-            descricao: "verde militar,azul marinho,preto",
+            descricao: "Verde militar,azul marinho,preto",
         },
         {
             id: 7,
@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             id: 8,
             nome: "Jaqueta frio em trico",
-            categoria: "jaquetas",
+            categoria: "Jaquetas",
             preco: 319.90,
             tamanho: "P, M, G",
             imagem:
@@ -122,17 +122,17 @@ document.addEventListener("DOMContentLoaded", () => {
             preco: 299.90,
             tamanho: "P, M, G,GG",
             imagem:
-                "./assets/jaqueta couro PU.jpg",
+                "./assets/Jaqueta couro PU.jpg",
             descricao: "Marrom,preto",
         },
         {
             id: 10,
             nome: "Conjunto ",
-            categoria: "conjuntos",
+            categoria: "Conjuntos",
             preco: 299.90,
             tamanho: "P, M, G",
             imagem:
-                "./assets/conjunto .jpg",
+                "./assets/Conjunto .jpg",
             descricao: "Marssalae,off white,preto",
         },
         {
@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
             preco: 379.90,
             tamanho: "P, M, G,GG",
             imagem:
-                "./assets/casaco lã batida.jpg",
+                "./assets/Casaco lã batida.jpg",
             descricao: "Marrom,nude e preto",
         },
         {
@@ -150,17 +150,17 @@ document.addEventListener("DOMContentLoaded", () => {
             nome: "Blusa de gola ",
             categoria: "Blusas de frio",
             preco: 239.90,
-            tamanho: "veste (tamanho unico)",
+            tamanho: "Veste (tamanho unico)",
             imagem:
                 "./assets/Blusa de gola.jpg",
-            descricao: "off white",
+            descricao: "off-white",
         },
         {
             id: 13,
             nome: "Saia mini suede ",
             categoria: "Vestidos",
             preco: 169.90,
-            tamanho: "veste (tamanho unico)",
+            tamanho: "Veste (tamanho unico)",
             imagem:
                 "./assets/Saia mini suede.jpg",
             descricao: "Areia,marrom,Preta",
@@ -178,22 +178,22 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             id: 15,
             nome: "Mini bolsa ",
-            categoria: "bolsas",
+            categoria: "Bolsas",
             preco: 89.90,
             tamanho: "padrao",
             imagem:
                 "./assets/bolsa-mini.jpeg",
-            descricao: "marrom",
+            descricao: "Marrom",
         },
         {
             id: 16,
             nome: "Legguing de pezinho ",
-            categoria: "calças",
+            categoria: "Calças",
             preco: 89.90,
             tamanho: "P, M, G,GG",
             imagem:
                 "./assets/Legguing de pezinho.jpg",
-            descricao: "marrom,azul bebê,preto,branco",
+            descricao: "Marrom,azul bebê,preto,branco",
         },
 
     ];

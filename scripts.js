@@ -34,80 +34,80 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             id: 1,
             nome: "Conjunto veludo",
-            categoria: "conjuntos",
+            categoria: "Conjuntos",
             preco: 239.90,
-            tamanho: "tamanho unico veste 34,42",
+            tamanho: "Tamanho unico veste 34,42",
             imagem:
-                "./assets/conjunto-veludo marrom.jpg",
-            descricao: "marrom",
+                "./assets/Conjunto-veludo marrom.jpg",
+            descricao: "Marrom",
 
         },
         {
             id: 2,
-            nome: "conjunto veludo",
-            categoria: "conjuntos",
+            nome: "Conjunto veludo",
+            categoria: "Conjuntos",
             preco: 239.90,
-            tamanho: "tamanho unico veste 34,42",
+            tamanho: "Tamanho unico veste 34,42",
             imagem:
-                "./assets/conjunto veludo white.jpg",
-            descricao: "branco",
+                "./assets/Conjunto veludo white.jpg",
+            descricao: "Branco",
         },
         {
             id: 3,
             nome: "Calça legguing courino",
-            categoria: "calças",
+            categoria: "Calças",
             preco: 149.90,
             tamanho: "P, M, G,GG",
             imagem:
-                "./assets/calca legguing courino.jpg",
-            descricao: "marrom,preto",
+                "./assets/Calca legguing courino.jpg",
+            descricao: "Marrom,preto",
 
         },
         {
             id: 4,
             nome: "Calça jeans",
-            categoria: "calças",
+            categoria: "Calças",
             preco: 249.90,
             tamanho: "Tamanho 38,40,42",
             imagem:
                 "./assets/calca jeans blue.jpg",
-            descricao: "azul",
+            descricao: "Azul",
         },
 
         {
             id: 5,
             nome: "Vestido em couro PU",
-            categoria: "vestidos",
+            categoria: "Vestidos",
             preco: 199.90,
             tamanho: "M, G, GG",
             imagem:
                 "./assets/vestido em couro PU.jpg",
-            descricao: "azul marinho,verde militar,preto",
+            descricao: "Azul marinho,verde militar,preto",
         },
 
         {
             id: 6,
-            nome: "vestido longo",
-            categoria: "vestidos",
+            nome: "Vestido longo",
+            categoria: "Vestidos",
             preco: 219.90,
             tamanho: "tamanho unico 34 ao 42",
             imagem:
-                "./assets/vestido longo.jpeg",
+                "./assets/Vestido longo.jpeg",
             descricao: "verde militar,azul marinho,preto",
         },
         {
             id: 7,
-            nome: "blusa de frio",
-            categoria: "blusas de frio",
+            nome: "Blusa de frio",
+            categoria: "Blusas de frio",
             preco: 319.90,
             tamanho: "P, M, G,GG",
             imagem:
-                "./assets/blusa de frio.jpg",
+                "./assets/Blusa de frio.jpg",
             descricao: "",
         },
         {
             id: 8,
-            nome: "jaqueta frio em trico",
+            nome: "Jaqueta frio em trico",
             categoria: "jaquetas",
             preco: 319.90,
             tamanho: "P, M, G",
@@ -117,28 +117,28 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
             id: 9,
-            nome: "jaqueta couro PU",
-            categoria: "jaquetas",
+            nome: "Jaqueta couro PU",
+            categoria: "Jaquetas",
             preco: 299.90,
             tamanho: "P, M, G,GG",
             imagem:
                 "./assets/jaqueta couro PU.jpg",
-            descricao: "marrom,preto",
+            descricao: "Marrom,preto",
         },
         {
             id: 10,
-            nome: "conjunto ",
+            nome: "Conjunto ",
             categoria: "conjuntos",
             preco: 299.90,
             tamanho: "P, M, G",
             imagem:
                 "./assets/conjunto .jpg",
-            descricao: "marssalae,off white preto",
+            descricao: "Marssalae,off white,preto",
         },
         {
             id: 11,
-            nome: "casaco lã batida",
-            categoria: "jaquetas",
+            nome: "Casaco lã batida",
+            categoria: "Jaquetas",
             preco: 379.90,
             tamanho: "P, M, G,GG",
             imagem:
@@ -147,18 +147,18 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
             id: 12,
-            nome: "blusa de gola ",
-            categoria: "blusas de frio",
+            nome: "Blusa de gola ",
+            categoria: "Blusas de frio",
             preco: 239.90,
             tamanho: "veste (tamanho unico)",
             imagem:
-                "./assets/blusa de gola.jpg",
+                "./assets/Blusa de gola.jpg",
             descricao: "off white",
         },
         {
             id: 13,
             nome: "Saia mini suede ",
-            categoria: "vestidos",
+            categoria: "Vestidos",
             preco: 169.90,
             tamanho: "veste (tamanho unico)",
             imagem:
@@ -167,17 +167,17 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
             id: 14,
-            nome: "mini bolsa ",
-            categoria: "bolsas",
+            nome: "Mini bolsa ",
+            categoria: "Bolsas",
             preco: 89.90,
             tamanho: "Padrao",
             imagem:
                 "./assets/mini bolsas .jpg",
-            descricao: "branco",
+            descricao: "Branco",
         },
         {
             id: 15,
-            nome: "mini bolsa ",
+            nome: "Mini bolsa ",
             categoria: "bolsas",
             preco: 89.90,
             tamanho: "padrao",
@@ -192,7 +192,7 @@ document.addEventListener("DOMContentLoaded", () => {
             preco: 89.90,
             tamanho: "P, M, G,GG",
             imagem:
-                "./assets/legguing de pezinho.jpg",
+                "./assets/Legguing de pezinho.jpg",
             descricao: "marrom,azul bebê,preto,branco",
         },
 

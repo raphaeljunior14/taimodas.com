@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
             preco: 239.90,
             tamanho: "Tamanho unico veste 34,42",
             imagem:
-                "./assets/Conjunto-veludo marrom .jpg",
+                "./assets/Conjunto-veludo marrom.jpg",
             descricao: "Marrom",
 
         },
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
             preco: 239.90,
             tamanho: "Tamanho unico veste 34,42",
             imagem:
-                "./assets/Conjunto veludo white .jpg",
+                "./assets/Conjunto veludo white.jpg",
             descricao: "Branco",
         },
         {
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
             preco: 149.90,
             tamanho: "P, M, G,GG",
             imagem:
-                "./assets/Calca legguing courino .jpg",
+                "./assets/Calca legguing courino.jpg",
             descricao: "Marrom,preto",
 
         },
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
             preco: 249.90,
             tamanho: "Tamanho 38,40,42",
             imagem:
-                "./assets/Calca jeans blue .jpg",
+                "./assets/Calca jeans blue.jpg",
             descricao: "Azul",
         },
 
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
             preco: 199.90,
             tamanho: "M, G, GG",
             imagem:
-                "./assets/Vestido em couro PU .jpg",
+                "./assets/Vestido em couro PU.jpg",
             descricao: "Azul marinho,verde militar,preto",
         },
 
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
             preco: 219.90,
             tamanho: "Tamanho unico 34 ao 42",
             imagem:
-                "./assets/Vestido longo .jpeg",
+                "./assets/Vestido longo.jpeg",
             descricao: "Verde militar,azul marinho,preto",
         },
         {
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
             preco: 319.90,
             tamanho: "P, M, G,GG",
             imagem:
-                "./assets/Blusa de frio .jpg",
+                "./assets/Blusa de frio.jpg",
             descricao: "",
         },
         {
@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
             preco: 319.90,
             tamanho: "P, M, G",
             imagem:
-                "./assets/jaqueta veludo .jpg",
+                "./assets/jaqueta veludo.jpg",
             descricao: "",
         },
         {
@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
             preco: 299.90,
             tamanho: "P, M, G,GG",
             imagem:
-                "./assets/Jaqueta couro PU .jpg",
+                "./assets/Jaqueta couro PU.jpg",
             descricao: "Marrom,preto",
         },
         {
@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
             preco: 299.90,
             tamanho: "P, M, G",
             imagem:
-                "./assets/Conjunto .jpg",
+                "./assets/Conjunto.jpg",
             descricao: "Marssalae,off white,preto",
         },
         {
@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
             preco: 379.90,
             tamanho: "P, M, G,GG",
             imagem:
-                "./assets/Casaco lã batida .jpg",
+                "./assets/Casaco lã batida.jpg",
             descricao: "Marrom,nude e preto",
         },
         {
@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", () => {
             preco: 239.90,
             tamanho: "Veste (tamanho unico)",
             imagem:
-                "./assets/Blusa de gola .jpg",
+                "./assets/Blusa de gola.jpg",
             descricao: "off-white",
         },
         {
@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
             preco: 169.90,
             tamanho: "Veste (tamanho unico)",
             imagem:
-                "./assets/Saia mini suede .jpg",
+                "./assets/Saia mini suede.jpg",
             descricao: "Areia,marrom,Preta",
         },
         {
@@ -182,7 +182,7 @@ document.addEventListener("DOMContentLoaded", () => {
             preco: 89.90,
             tamanho: "padrao",
             imagem:
-                "./assets/bolsa-mini .jpeg",
+                "./assets/bolsa-mini.jpeg",
             descricao: "Marrom",
         },
         {
@@ -192,7 +192,7 @@ document.addEventListener("DOMContentLoaded", () => {
             preco: 89.90,
             tamanho: "P, M, G,GG",
             imagem:
-                "./assets/Legguing de pezinho .jpg",
+                "./assets/Legguing de pezinho.jpg",
             descricao: "Marrom,azul bebê,preto,branco",
         },
 

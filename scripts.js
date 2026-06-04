@@ -49,12 +49,12 @@ document.addEventListener("DOMContentLoaded", () => {
             preco: 239.90,
             tamanho: "Tamanho unico veste 34,42",
             imagem:
-                "./assets/Conjunto veludo .jpg",
+                "./assets/Conjunto veludo .jpeg",
             descricao: "Branco",
         },
         {
             id: 3,
-            nome: "Calça legguing courino",
+            nome: "Calça legguing courino ",
             categoria: "Calças",
             preco: 149.90,
             tamanho: "P, M, G,GG",
@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
             preco: 379.90,
             tamanho: "P, M, G,GG",
             imagem:
-                "./assets/Casaco lã batida.jpg",
+                "./assets/Casaco lã batida .jpg",
             descricao: "Marrom,nude e preto",
         },
         {
@@ -157,12 +157,12 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
             id: 13,
-            nome: "Saia mini suede ",
+            nome: "Saia mini suede",
             categoria: "Vestidos",
             preco: 169.90,
             tamanho: "Veste (tamanho unico)",
             imagem:
-                "./assets/Saia mini suede.jpg",
+                "./assets/Saia mini suede .jpg",
             descricao: "Areia,marrom,Preta",
         },
         {
@@ -194,6 +194,46 @@ document.addEventListener("DOMContentLoaded", () => {
             imagem:
                 "./assets/Legguing de pezinho.jpg",
             descricao: "Marrom,azul bebê,preto,branco",
+        },
+         {
+            id: 17,
+            nome: "Calça jeans",
+            categoria: "Calças",
+            preco: 89.90,
+            tamanho: "P, M, G,GG",
+            imagem:
+                "./assets/Calça jeans.jpg",
+            descricao: "azul",
+        },
+         {
+            id: 18,
+            nome: "Blusa masculina",
+            categoria: "Blusas",
+            preco: 89.90,
+            tamanho: "P, M, G,GG",
+            imagem:
+                "./assets/Blusa masculina.jpg",
+            descricao: "Preta ",
+        },
+         {
+            id: 19,
+            nome: "Calça masculina",
+            categoria: "Calças",
+            preco: 89.90,
+            tamanho: "P, M, G,GG",
+            imagem:
+                "./assets/Calça masculina.jpg",
+            descricao: "Azul",
+        },
+         {
+            id: 20,
+            nome: "Relogio masculino",
+            categoria: "Acessòrios",
+            preco: 89.90,
+            tamanho: "P, M, G,GG",
+            imagem:
+                "./assets/Relogio masculino.jpg",
+            descricao: "",
         },
 
     ];

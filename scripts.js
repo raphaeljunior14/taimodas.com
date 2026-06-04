@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
             preco: 239.90,
             tamanho: "Tamanho unico veste 34,42",
             imagem:
-                "./assets/Conjunto-veludo marrom.jpg",
+                "./assets/Conjunto veludo.jpg",
             descricao: "Marrom",
 
         },
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
             preco: 239.90,
             tamanho: "Tamanho unico veste 34,42",
             imagem:
-                "./assets/Conjunto veludo white.jpg",
+                "./assets/Conjunto veludo .jpg",
             descricao: "Branco",
         },
         {
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
             preco: 149.90,
             tamanho: "P, M, G,GG",
             imagem:
-                "./assets/Calca legguing courino.jpg",
+                "./assets/Calça legguing courino.jpg",
             descricao: "Marrom,preto",
 
         },
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
             preco: 249.90,
             tamanho: "Tamanho 38,40,42",
             imagem:
-                "./assets/Calca jeans blue.jpg",
+                "./assets/Calca jeans.jpg",
             descricao: "Azul",
         },
 
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
             preco: 219.90,
             tamanho: "Tamanho unico 34 ao 42",
             imagem:
-                "./assets/Vestido longo.jpeg",
+                "./assets/Vestido longo.jpg",
             descricao: "Verde militar,azul marinho,preto",
         },
         {
@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
             preco: 319.90,
             tamanho: "P, M, G",
             imagem:
-                "./assets/jaqueta veludo.jpg",
+                "./assets/jaqueta frio em trico.jpg",
             descricao: "",
         },
         {
@@ -147,7 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
             id: 12,
-            nome: "Blusa de gola ",
+            nome: "Blusa de gola",
             categoria: "Blusas de frio",
             preco: 239.90,
             tamanho: "Veste (tamanho unico)",
@@ -180,9 +180,9 @@ document.addEventListener("DOMContentLoaded", () => {
             nome: "Mini bolsa ",
             categoria: "Bolsas",
             preco: 89.90,
-            tamanho: "padrao",
+            tamanho: "Padrao",
             imagem:
-                "./assets/bolsa-mini.jpeg",
+                "./assets/Mini bolsa.jpg",
             descricao: "Marrom",
         },
         {

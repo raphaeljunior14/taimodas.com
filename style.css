@@ -34,11 +34,10 @@ body {
 }
 
 .link-whatsapp {
-    height: 50px;
+    width: 50px;
     position: relative;
     right: 7px;
     bottom: -8px;
-
     cursor: pointer;
 
 }

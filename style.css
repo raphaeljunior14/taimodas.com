@@ -33,6 +33,29 @@ body {
     line-height: 1.6;
 }
 
+
+h1,
+h2,
+h3 {
+    font-family: 'Montserrat', sans-serif
+}
+
+/* Header */
+header {
+    background: #ffff;
+    position: sticky;
+    top: 0;
+    z-index: 990;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    box-shadow: 0 6px 20px rgba(9, 62, 184, 0.06);
+    border-bottom: 1px solid #eef2f7;
+}
+
 .logo-whatsapp {
     width: 50px;
     position: relative;
@@ -81,26 +104,6 @@ body {
     animation: pulse 0.1s infinite;
 
 
-}
-
-h1,h2,h3 {
-    font-family: 'Montserrat', sans-serif
-}
-
-/* Header */
-header {
-    background: #ffff;
-    position: sticky;
-    top: 0;
-    z-index: 990;
-    padding: 1rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    flex-wrap: wrap;
-    box-shadow: 0 6px 20px rgba(9, 62, 184, 0.06);
-    border-bottom: 1px solid #eef2f7;
 }
 
 .logo {

@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
             preco: 319.90,
             tamanho: "P, M, G",
             imagem:
-                "./assets/jaqueta frio em trico .jpg",
+                "./assets/jaqueta frio em trico.jpg",
             descricao: "",
         },
         {
@@ -212,7 +212,7 @@ document.addEventListener("DOMContentLoaded", () => {
             preco: 89.90,
             tamanho: "P, M, G,GG",
             imagem:
-                "./assets/Blusa masculina .jpg",
+                "./assets/Blusa masculina.jpg",
             descricao: "Preta ",
         },
          {
@@ -491,7 +491,7 @@ document.addEventListener("DOMContentLoaded", () => {
             cupomInfo = `\n*Cupom Aplicado:* ${appliedCoupon.code} (${formatarMoeda(discountAmount)})`;
         }
         const total = subtotal - discountAmount;
-        let mensagem = `*-- NOVO PEDIDO RA Moda Masculina --*\n\n*Itens:*\n${itensPedido}\n\n*Subtotal:* ${formatarMoeda(subtotal)}${cupomInfo}\n*Total:* ${formatarMoeda(total)}\n\n-------------------------\n\n`;
+        let mensagem = `*-- NOVO PEDIDO TAI-MODAS--*\n\n*Itens:*\n${itensPedido}\n\n*Subtotal:* ${formatarMoeda(subtotal)}${cupomInfo}\n*Total:* ${formatarMoeda(total)}\n\n-------------------------\n\n`;
 
         if (tipoEntrega === "delivery") {
             const nome = document.getElementById("delivery-name").value;

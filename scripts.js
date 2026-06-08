@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
             id: 8,
-            nome: "Jaqueta frio em trico",
+            nome: "Jaqueta frio em trico ",
             categoria: "Jaquetas",
             preco: 319.90,
             tamanho: "P, M, G",
@@ -207,7 +207,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
          {
             id: 18,
-            nome: "Blusa masculina",
+            nome: "Blusa masculina ",
             categoria: "Blusas",
             preco: 89.90,
             tamanho: "P, M, G,GG",

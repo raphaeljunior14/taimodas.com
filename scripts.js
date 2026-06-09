@@ -107,12 +107,12 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
             id: 8,
-            nome: "Jaqueta frio em trico ",
+            nome: "Jaqueta frio em trico",
             categoria: "Jaquetas",
             preco: 319.90,
             tamanho: "P, M, G",
             imagem:
-                "./assets/jaqueta frio em trico.jpg",
+                "./assets/jaqueta frio em trico .jpg",
             descricao: "",
         },
         {
@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
             tamanho: "P, M, G",
             imagem:
                 "./assets/Conjunto.jpg",
-            descricao: "Marssalae,off white,preto",
+            descricao: "off white,Marssala,preto",
         },
         {
             id: 11,
@@ -199,28 +199,28 @@ document.addEventListener("DOMContentLoaded", () => {
             id: 17,
             nome: "Calça jeans",
             categoria: "Calças",
-            preco: 89.90,
-            tamanho: "P, M, G,GG",
+            preco: 119.90,
+            tamanho: "Veste 38,40,42",
             imagem:
                 "./assets/Calça jeans.jpg",
             descricao: "azul",
         },
          {
             id: 18,
-            nome: "Blusa masculina ",
+            nome: "Blusa masculina",
             categoria: "Blusas",
             preco: 89.90,
-            tamanho: "P, M, G,GG",
+            tamanho: "P,M,G",
             imagem:
-                "./assets/Blusa masculina.jpg",
+                "./assets/Blusa masculina .jpg",
             descricao: "Preta ",
         },
          {
             id: 19,
             nome: "Calça masculina",
             categoria: "Calças",
-            preco: 89.90,
-            tamanho: "P, M, G,GG",
+            preco: 119.90,
+            tamanho: "Veste 38,40,42",
             imagem:
                 "./assets/Calça masculina.jpg",
             descricao: "Azul",
@@ -229,8 +229,8 @@ document.addEventListener("DOMContentLoaded", () => {
             id: 20,
             nome: "Relogio masculino",
             categoria: "Acessòrios",
-            preco: 89.90,
-            tamanho: "P, M, G,GG",
+            preco: 99.90,
+            tamanho: "",
             imagem:
                 "./assets/Relogio masculino.jpg",
             descricao: "",
@@ -491,7 +491,7 @@ document.addEventListener("DOMContentLoaded", () => {
             cupomInfo = `\n*Cupom Aplicado:* ${appliedCoupon.code} (${formatarMoeda(discountAmount)})`;
         }
         const total = subtotal - discountAmount;
-        let mensagem = `*-- NOVO PEDIDO TAI-MODAS--*\n\n*Itens:*\n${itensPedido}\n\n*Subtotal:* ${formatarMoeda(subtotal)}${cupomInfo}\n*Total:* ${formatarMoeda(total)}\n\n-------------------------\n\n`;
+        let mensagem = `*= NOVO PEDIDO = *\n\n*Itens:*\n${itensPedido}\n\n*Subtotal:* ${formatarMoeda(subtotal)}${cupomInfo}\n*Total:* ${formatarMoeda(total)}\n\n-------------------------\n\n`;
 
         if (tipoEntrega === "delivery") {
             const nome = document.getElementById("delivery-name").value;

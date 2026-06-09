@@ -58,8 +58,9 @@ header {
 }
 
 .logo-whatsapp {
+
     width: 50px;
-    position:top;
+    position:relative;
     right: 7px;
     bottom: -8px;
     cursor: pointer;
@@ -67,6 +68,7 @@ header {
 }
 
 .whatsapp-btn {
+
     display: inline-block;
     background-color: #25D366;
     color: white;
@@ -82,11 +84,13 @@ header {
 
 /* Efeito ao passar o mouse */
 .whatsapp-btn:hover {
+
     transform: scale(1.1);
 }
 
 /* Animação de pulsar */
 @keyframes pulse {
+    
     0% {
         box-shadow: 0 0 0 0, 0 rgba(37, 211, 102, 0.7);
     }

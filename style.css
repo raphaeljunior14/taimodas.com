@@ -59,7 +59,7 @@ header {
 
 .logo-whatsapp {
     width: 50px;
-    position: relative;
+    position:top;
     right: 7px;
     bottom: -8px;
     cursor: pointer;

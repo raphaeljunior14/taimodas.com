@@ -107,12 +107,12 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
             id: 8,
-            nome: "Jaqueta frio em trico ",
+            nome: "Jaqueta em trico ",
             categoria: "Jaquetas",
             preco: 319.90,
             tamanho: "P, M, G",
             imagem:
-                "./assets/Jaqueta frio em trico.jpg ",
+                "./assets/Jaqueta em trico.jpg ",
             descricao: "",
         },
         {

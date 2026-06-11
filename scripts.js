@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
             preco: 319.90,
             tamanho: "P, M, G",
             imagem:
-                "./assets/Jaqueta frio em trico .jpg",
+                "./assets/Jaqueta frio em trico.jpg ",
             descricao: "",
         },
         {
@@ -212,7 +212,7 @@ document.addEventListener("DOMContentLoaded", () => {
             preco: 89.90,
             tamanho: "P,M,G",
             imagem:
-                "./assets/Blusa masculina .jpg",
+                "./assets/Blusa masculina.jpg ",
             descricao: "Preta ",
         },
          {

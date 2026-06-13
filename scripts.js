@@ -193,7 +193,7 @@ document.addEventListener("DOMContentLoaded", () => {
             tamanho: "P, M, G,GG",
             imagem:
                 "./assets/Legguing de pezinho.jpg",
-            descricao: "Marrom,azul bebê,preto,branco",
+            descricao: "Marrom,preto",
         },
          {
             id: 17,

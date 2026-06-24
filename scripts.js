@@ -25,82 +25,71 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const produtos = [
         {
-            id: 1, nome: "Calça Jeans", categoria: "Calças", descricao: "", preco: 129.90, imagens:
+            id: 1, nome: "Calça legguing ", categoria: "Calças", descricao: "", preco: 119.90,
+            imagens: ["./assets/Calça legguing pezinho1.jpg", "./assets/Calça legguing pezinho3.jpg", "./assets/Calça legguing pezinho black.jpg", "./assets/Calça legguing pezinho2.jpg"]
+        },
+
+        {
+            id: 2, nome: "Calça Jeans", categoria: "Calças", descricao: "", preco: 129.90, imagens:
                 ["./assets/Calça jeans1.jpg", "./assets/Calça jeans2.jpg", "./assets/calça jeans3.jpg"]
         },
-        {
-            id: 2, nome: "Calça legguing ", categoria: "Calças", descricao: "", preco: 119.90,
-            imagens: ["./assets/Calça legguing pezinho1.jpg", "./assets/Calça legguing pezinho2.jpg", "./assets/Calça legguing pezinho black.jpg", "./assets/Calça legguing pezinho3.jpg"]
-        },
-        
-        {
-            id: 3, nome: "Calça legguing ", categoria: "Calças", descricao: "", preco: 119.90,
-            imagens: ["./assets/Calça legguing courino2.jpg", "./assets/Calça legguing courino1.jpg", "./assets/Calça legguing black.jpg"]
-        },
 
         {
-            id: 4, nome: "Conjuntos", categoria: "Conjuntos", descricao: "", preco: 239.90,
+            id: 3, nome: "Calça courino ", categoria: "Calças", descricao: "", preco: 119.90,
+            imagens: ["./assets/Calça legguing courino2.jpg", "./assets/Calça legguing courino1.jpg", "./assets/Calça courino.jpg", "./assets/Calça legguing black.jpg"]
+        },
+        {
+            id: 4, nome: "Conjuntos camurça", categoria: "Conjuntos", descricao: "", preco: 239.90,
             imagens: ["./assets/Conjunto.jpg", "./assets/Conjunto camurça.jpg", "./assets/Conjunto black.jpg"]
         },
-       
-      
+
+
         {
-            id: 5, nome: "Camiseta Corinthians Preta", categoria: "corinthians", descricao: "", preco: 79.90,
-            imagens: ["./assets/corinthians2.jpg", "./assets/corinthians2.jpg", "./assets/corinthians2.jpg"]
-        },
-        {
-            id: 6, nome: "Camiseta Corinthians Branca", categoria: "corinthians", descricao: "", preco: 79.90,
-            imagens: ["./assets/corinthians1.jpg", "./assets/corinthians1.jpg", "./assets/corinthians1.jpg"]
-        },
-        {
-            id: 7, nome: "Camiseta São Paulo", categoria: "sao-paulo", descricao: "", preco: 79.90,
-            imagens: ["./assets/sao-paulo.jpg", "./assets/sao-paulo.jpg", "./assets/sao-paulo.jpg"]
-        },
-        {
-            id: 8, nome: "Camiseta São Paulo Preta", categoria: "sao-paulo", preco: 79.90,
-            imagens: ["./assets/sao-paulo2.jpg", "./assets/sao-paulo2.jpg", "./assets/sao-paulo2.jpg"]
-        },
-        {
-            id: 9, nome: "Camiseta Goiás Verde", categoria: "goias", preco: 79.90,
-            imagens: ["./assets/goias.jpg", "./assets/goias.jpg", "./assets/goias.jpg"]
-        },
-        {
-            id: 10, nome: "Camiseta Goiás Branca", categoria: "goias", preco: 79.90,
-            imagens: ["./assets/goias2.jpg", "./assets/goias2.jpg", "./assets/goias2.jpg"]
-        },
-        {
-            id: 11, nome: "Camiseta Vila Nova", categoria: "vila-nova", preco: 79.90,
-            imagens: ["./assets/vila-nova.jpg", "./assets/vila-nova.jpg", "./assets/vila-nova.jpg"]
-        },
-        {
-            id: 12, nome: "Camiseta Vila Nova Branca", categoria: "vila-nova", preco: 79.90,
-            imagens: ["./assets/vila-nova2.jpg", "./assets/vila-nova2.jpg", "./assets/vila-nova2.jpg",]
-        },
-        {
-            id: 10, nome: "Camiseta Brasil Amarela", categoria: "brasil", preco: 89.90,
-            imagens: ["./assets/brasil1.jpg", "./assets/brasil1.jpg", "./assets/brasil1.jpg"]
-        },
-        {
-            id: 11, nome: "Camiseta Brasil Branca", categoria: "brasil", preco: 89.90,
-            imagens: ["./assets/brasil2.jpg", "./assets/brasil3.jpg", "./assets/brasil2.jpg"]
-        },
-        {
-            id: 12, nome: "Camiseta Brasil Preta", categoria: "brasil", preco: 89.90,
-            imagens: ["./assets/calca legguing courino.jpg", "./assets/blusa de frio.jpg", "./assets/blusa de frio.jpg"]
-        },
-        {
-            id: 13, nome: "Camiseta Brasil Preta", categoria: "brasil", preco: 89.90,
-            imagens: ["./assets/calca legguing courino.jpg", "./assets/blusa de frio.jpg", "./assets/blusa de frio.jpg"]
-        },
-        {
-            id: 14, nome: "Camiseta Brasil Preta", categoria: "brasil", preco: 89.90,
-            imagens: ["./assets/calca legguing courino.jpg", "./assets/blusa de frio.jpg ", "./assets/blusa de frio.jpg"]
-        },
-        {
-            id: 15, nome: "Camiseta Brasil Preta", categoria: "brasil", preco: 89.90,
-            imagens: ["./assets/calca legguing courino.jpg", "./assets/blusa de frio.jpg ", "./assets/blusa de frio.jpg "]
+            id: 5, nome: "Blusas alongadas", categoria: "blusas de frio", descricao: "", preco: 169.90,
+            imagens: ["./assets/Blusa alongada1.jpg", "./assets/Blusa alongada2.jpg", "./assets/Blusa alongada3.jpg"]
         },
 
+        {
+            id: 6, nome: "Conjuntos ponche", categoria: "Conjuntos", descricao: "", preco: 199.90,
+            imagens: ["./assets/Conjunto white.jpg", "./assets/Conjunto white.jpg", "./assets/Conjunto ponche.jpg", "./assets/Conjunto ponche1.jpg"]
+        },
+        {
+            id: 7, nome: "Blusas poliamida ", categoria: "Blusas de frio", descricao: "", preco: 119.90,
+            imagens: ["./assets/Blusa poliamida com laço.jpg", "./assets/Blusa poliamida com laço1.jpg"]
+        },
+        {
+            id: 8, nome: "Calças virginia", categoria: "Calças", descricao: "", preco: 99.90,
+            imagens: ["./assets/Calça virginia1.jpg", "./assets/Calça virginia2.jpg"]
+        },
+        {
+            id: 9, nome: "Casaco courino/Casaco lã batida", categoria: "jaquetas", descricao: "", preco: 299.90,
+            imagens: ["./assets/casaco courino.jpg", "./assets/casaco la batida.jpg"]
+        },
+        {
+            id: 10, nome: "Jaqueta em couro Pu", categoria: "jaquetas", descricao: "", preco: 299.90,
+            imagens: ["./assets/jaqueta de couro.jpg", "./assets/jaqueta em couro Pu.jpg"]
+        },
+        {
+            id: 11, nome: "Jaqueta veludo", categoria: "jaquetas", descricao: "", preco: 329.90,
+            imagens: ["./assets/Jaqueta veludo.jpg", "./assets/Jaqueta white.jpg"]
+        },
+        {
+            id: 12, nome: "Mini saia ", categoria: "Saia", descricao: "", preco: 179.90,
+            imagens: ["./assets/Mini saia1.jpg", "./assets/Mini saia.jpg", "./assets/Mini saia2.jpg", "./assets/Mini saia3.jpg"]
+        },
+        {
+            id: 10, nome: "Vestido longo", categoria: "Vestidos", descricao: "", preco: 149.90,
+            imagens: ["./assets/vestido longo1.jpg", "./assets/vestido longo2.jpg"]
+        },
+        {
+            id: 11, nome: "Conjunto moletom com gola ou ziper", categoria: "conjuntos", descricao: "", preco: 449.90,
+            imagens: ["./assets/Conjunto moletom.jpg", "./assets/.jpg", "./assets/.jpg"]
+        },
+        {
+            id: 12, nome: "Calça jeans", categoria: "Calça", descricao: "", preco: 149.90,
+            imagens: ["./assets/Calça-jeans1.jpg", "./assets/.jpg", "./assets/.jpg"]
+        },
+      
     ];
 
 
@@ -172,7 +161,7 @@ document.addEventListener("DOMContentLoaded", () => {
                  <div class="size-selector" data-selected-size="">
 
 
-     ${(p.id === 1 || p.id === 2 || p.id === 3) ?
+     ${(p.id === 1 || p.id === 2 || p.id === 3 || p.id === 8 || p.id === 9  ) ?
                 `<button class="size-btn" onclick="selectSize(this,'38')">38</button>
                         <button class="size-btn" onclick="selectSize(this, '40')">40</button>
                         <button class="size-btn" onclick="selectSize(this, '42')">42</button><p "
@@ -180,7 +169,7 @@ document.addEventListener("DOMContentLoaded", () => {
                          </p>${p.descricao}</p>` : ''}
         
 
-                       ${(p.id === 4 || p.id === 5 || p.id === 6 || p.id === 7) ?
+                       ${(p.id === 4 || p.id === 5 || p.id === 6 || p.id === 7 || p.id === 10 || p.id === 11 || p.id === 12 ) ?
                 `<button class="size-btn" onclick="selectSize(this,'P')">P</button>
                         <button class="size-btn" onclick="selectSize(this, 'M')">M</button>
                         <button class="size-btn" onclick="selectSize(this, 'G')">G</button>

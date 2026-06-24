@@ -1,41 +1,28 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="pt-BR">
 
-    <!-- Fontes -->
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;600&display=swap"
         rel="stylesheet">
-
-    <!-- Ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-   
-    <!-- Estilos -->
     <link rel="stylesheet" href="style.css" />
-    <title>TAI Modas</title>
-    
+    <title>Tai-modas></title>
 </head>
 
 <body>
-    <header>
-      
-        <div class="logo">
-       <i class="fa-solid " aria-hidden="true"></i>
-            <h1>👩🏻 Tai Modas</h1>
-           
-        </div>
+    
 
-            <div class="social-panel">
-        <a href="https://facebook.com/tainá-fernandes/" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://tiktok.com/@tai26388/" target="_blank" class="tiktok"><i class="fab fa-tiktok"></i></a>
-            <a href="https://www.instagram.com/taiimoda/" target="_blank" class="instagram"><i
-                    class="fab fa-instagram"></i></a>
-          
+    <header>
+
+        <div class="logo">
+
+            <h1>👩🏻TAI MODAS </h1>
+
         </div>
 
                 <a href="https://wa.me/5515998494383?text=%20Tai%20modas%20o%20que%20posso%20te%20ajudar%3F" target="_blank"
@@ -43,46 +30,47 @@
         💬 Fale no WhatsApp
     </a>
 
-        <div class="search-container" role="search">
-            <input placeholder="Buscar Produto..." class="search-input" aria-label="Buscar Produto" />
-            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+    
+          <div class="social-panel">
+            <a href="https://www.instagram.com/taiimoda/" target="_blank" class="instagram"><i
+                    class="fab fa-instagram"></i></a>
+        <a href="https://facebook.com/tainá-fernandes/" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://tiktok.com/@tai26388/" target="_blank" class="tiktok"><i class="fab fa-tiktok"></i></a>
+            
         </div>
 
-        <div class="cart-icon" aria-label="Abrir carrinho" role="button" tabindex="0">
-            <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+        
+
+        <div class="search-container">
+            <input type="text" placeholder="Buscar-produtos" class="search-input" />
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+    </section>
+        <div class="cart-icon">
+            <i class="fa-solid fa-cart-shopping"></i>
             <span class="cart-badge">0</span>
         </div>
     </header>
+    
+     
 
     <div class="categories-container">
-        <nav class="categories-bar" aria-label="Categorias de produtos">
-            <button class="category-btn active" data-category="all">
-                <i class="fa-solid fa-border-all" aria-hidden="true"></i> Todos
-            </button>
+        <nav class="categories-bar">
+            <button class="category-btn active" data-category="all"><i class="fa-solid fa-border-all"></i>
+                Todos</button>
 
-            <!-- Ícones por categoria -->
-            <button class="category-btn" data-category="Calças">
-                <i class="fa-solid fa-jeans" aria-hidden="true"></i> Calças 👖
-            </button>
-            <button class="category-btn" data-category="Conjuntos">
-                <i class="fa-solid" aria-hidden="true"></i> Conjuntos 🔥
-            </button>
-            <button class="category-btn" data-category="Blusas de frio">
-                <i class="fa-regular " aria-hidden="true"></i>Blusas de frio ❄️
-            </button>
-            <button class="category-btn" data-category="Jaquetas">
-                <i class="fa-solid" aria-hidden="true"></i>Jaquetas 🧥
-            </button>
-            <button class="category-btn" data-category="Vestidos">
-                <i class="fa-solid " aria-hidden="true"></i> Vestidos 👗
-            </button>
-              <button class="category-btn" data-category="Bolsas">
-                <i class="fa-solid " aria-hidden="true"></i> Bolsas 👜
-            </button>
+            <button class="category-btn" data-category="Calças">Calças 👖</button>
+            <button class="category-btn" data-category="Conjuntos">Conjuntos 🔥</button>
+             <button class="category-btn" data-category="Blusas de frio">Blusas de frio❄️ </button>
+            <button class="category-btn" data-category="Jaquetas">Jaquetas 🧥</button>
+            <button class="category-btn" data-category="Vestidos">Vestidos 👗</button>
+            <button class="category-btn" data-category="Saia">Saia 🩳</button>
+           
+
         </nav>
     </div>
-
-    <section class="hero-section">
+ <section class="hero-section">
         <div class="hero-content">
             <span class="hero-tag"> 👚Coleção Tai Modas</span>
             <h2>Dinheiro ou pix 10% off <i class="fa-solid fa-fire"></i></h2>
@@ -90,145 +78,54 @@
             <p>Condições especiais para nossos clientes venham conhecer a loja.</p>
 
         </div>
-    </section>
-
+ </section>
+ 
     <main class="products">
-        <div class="products-container"><!-- cards gerados pelo script --></div>
+        <div class="products-container"></div>
+        <p id="product-description"></p>
+        <p class="product-description-btn"></p>
     </main>
 
     <div class="cart-overlay"></div>
-
-    <aside class="cart-sidebar" aria-label="Carrinho">
+    <aside class="cart-sidebar">
         <div class="cart-header">
-            <h3>Meu Carrinho <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i></h3>
-            <button class="close-cart-btn" aria-label="Fechar carrinho">&times;</button>
+            <h3>Meu Carrinho <i class="fa-solid fa-cart-shopping"></i></h3>
+            <button class="close-cart-btn"><i class="fa-solid fa-xmark"></i></button>
         </div>
-
         <div class="cart-body"></div>
-
         <div class="cart-footer">
-            <div class="options-toggle" role="tablist">
-                <button class="delivery-btn active" data-option="delivery" role="tab" aria-selected="true">
-                    <i class="fa-solid fa-truck-fast" aria-hidden="true"></i> Entrega
-                </button>
-                <button class="delivery-btn" data-option="pickup" role="tab" aria-selected="false">
-                    <i class="fa-solid fa-store" aria-hidden="true"></i> Retirada
-                </button>
+            <div class="options-toggle">
+                <button class="delivery-btn active" data-option="delivery">Entrega</button>
+                <button class="delivery-btn" data-option="pickup">Retirada</button>
             </div>
-
-            <div id="delivery-form-container">
-                <div class="form-group">
-                    <label for="delivery-name">Seu Nome</label>
-                    <input type="text" id="delivery-name" placeholder="Nome e sobrenome" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="delivery-phone">Seu Telefone (WhatsApp)</label>
-                    <input type="tel" id="delivery-phone" placeholder="(XX) XXXXX-XXXX" maxlength="15" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="delivery-cep">CEP</label>
-                    <input type="text" id="delivery-cep" placeholder="00000-000" maxlength="9" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="delivery-address">Endereço</label>
-                    <textarea id="delivery-address" placeholder="Lote, Quadra, Número" required></textarea>
-                </div>
-
-                <div class="delivery-fee-notice">
-                    A taxa de entrega será calculada de acordo com a sua região.
-                </div>
-
-                <div class="payment-options-container">
-                    <h4>Forma de Pagamento</h4>
-
-                    <label class="payment-option selected">
-                        <input type="radio" name="payment" value="PIX" checked> PIX
-                    </label>
-
-                    <label class="payment-option">
-                        <input type="radio" name="payment" value="Cartão de Crédito"> Cartão de Crédito
-                    </label>
-
-                    <label class="payment-option">
-                        <input type="radio" name="payment" value="Cartão de Débito"> Cartão de Débito
-                    </label>
-
-                    <label class="payment-option">
-                        <input type="radio" name="payment" value="Dinheiro"> Dinheiro
-                    </label>
-
-                    <div id="troco-container">
-                        <div class="form-group">
-                            <label for="troco-para">Precisa de troco para quanto?</label>
-                            <input type="number" id="troco-para" placeholder="Ex: 50">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="pickup-form-container" style="display: none;">
-                <div class="form-group">
-                    <label for="pickup-name">Nome para Retirada</label>
-                    <input type="text" id="pickup-name" placeholder="Digite nome e sobrenome" required>
-                </div>
-
-                <div class="form-group">
-                    <label>Agende a Data e Hora</label>
-                    <div class="date-time-row">
-                        <input type="date" id="pickup-date" required>
-                        <select id="pickup-time" required>
-                            <option value="" disabled selected>Selecione</option>
-                            <option value="08:00">08:00</option>
-                            <option value="09:00">09:00</option>
-                            <option value="10:00">10:00</option>
-                            <option value="11:00">11:00</option>
-                            <option value="12:00">12:00</option>
-                            <option value="13:00">13:00</option>
-                            <option value="14:00">14:00</option>
-                            <option value="15:00">15:00</option>
-                            <option value="16:00">16:00</option>
-                            <option value="17:00">17:00</option>
-                            <option value="18:00">18:00</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-
-            <div class="coupon-container">
-                <!-- <input type="text" id="coupon-input" placeholder="Cupom de desconto"> -->
-                <button id="apply-coupon-btn"></button>
-            </div>
-
-            <p id="coupon-feedback" class="coupon-feedback"></p>
-
+            <div id="delivery-form-container"></div>
             <div class="cart-summary">
-                <div class="summary-line"><span>Subtotal</span><span id="cart-subtotal">R$ 0,00</span></div>
-                <div class="summary-line discount-line" style="display: none;">
-                    <!-- <span>Desconto</span><span id="cart-discount">- R$ 0,00 No dinheiro ou </span> -->
-                </div>
-                <div class="summary-line total"><span>Total</span><span id="cart-total">R$ 0,00</span></div>
+                <div class="summary-line"><span>Total</span><span id="cart-total">R$ 0,00</span></div>
             </div>
-        </div>
-
-        <div class="finish-order-btn-container">
             <button id="finish-order-btn" class="finish-order-btn" disabled>
-                <i class="fab fa-whatsapp" aria-hidden="true"></i> Finalizar Pedido
+                <i class="fa-brands fa-whatsapp"></i> Finalizar Pedido
             </button>
         </div>
     </aside>
 
-    <div class="view-cart-banner" aria-live="polite">
-        <p>Total: <span id="banner-total">R$ 0,00</span></p>
-        <button class="view-cart-banner-btn">Ver Carrinho</button>
-    </div>
+   
+</body>
 
-    <section>
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <div class="footer-logo">
+                
+            </div>
 
+            
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3661.7022370109994!2d-47.38092382550026!3d-23.398986878911728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf5ea28f047257%3A0x7d58b8d65470e1f9!2sRua%20M%C3%A1rio%20Monteiro%20de%20Carvalho%2C%2048%20-%20Cajuru%20do%20Sul%2C%20Sorocaba%20-%20SP%2C%2018105-015!5e0!3m2!1spt-BR!2sbr!4v1780016430849!5m2!1spt-BR!2sbr"
+        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+<h2>localização</h2>
 
-
+       
         <div class="contato-info">
 
             <h4>Onde estamos</h4>
@@ -237,31 +134,38 @@
             <p>Cnpj 22 433 415 0001-91</p>
             <p>Recepcao.taina@gmail.com</p>
 
-
         </div>
 
 
+        <div class="footer-col">
+            <h3>Pagamento</h3>
+            <div class="payment-methods">
+                <i class="fa-brands fa-pix"></i>
+                <i class="fa-brands fa-cc-visa"></i>
+                <i class="fa-brands fa-cc-mastercard"></i>
+                <i class="fa-solid fa-barcode"></i>
+            </div>
     </section>
 
 
 
-    <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3661.7022370109994!2d-47.38092382550026!3d-23.398986878911728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf5ea28f047257%3A0x7d58b8d65470e1f9!2sRua%20M%C3%A1rio%20Monteiro%20de%20Carvalho%2C%2048%20-%20Cajuru%20do%20Sul%2C%20Sorocaba%20-%20SP%2C%2018105-015!5e0!3m2!1spt-BR!2sbr!4v1780016430849!5m2!1spt-BR!2sbr"
-        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
 
+            <p class="safe-buy"><i class="fa-solid fa-shield-halved"></i> Compra 100% Segura</p>
+                  <div class="social-links">
+                <a href="https://instagram.com/" target="_blank"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://tiktok.com/" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </div>
 
-    <footer>
+        </div>
+    </div>
 
-        <p>2026 - Tai Modas. Todos os direitos reservados</p>
-
-
-    </footer>
-
-
-
-    <script src="./scripts.js"></script>
-
-</body>
-
+    <div class="footer-bottom">
+        <p>&copy; 2026 TAI MODAS. Todos os direitos reservados. Desenvolvido por <a href="https://wa.me/15998500495"
+                target="_blank">RJCODE.</a></p>
+    </div>
+</footer>
+ <script src="scripts.js"></script>
 </html>

@@ -1,618 +1,271 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // --- SELETORES GLOBAIS ---
-    const cartIcon = document.querySelector(".cart-icon"),
-        cartSidebar = document.querySelector(".cart-sidebar"),
-        cartOverlay = document.querySelector(".cart-overlay"),
-        closeCartBtn = document.querySelector(".close-cart-btn"),
-        cartBody = document.querySelector(".cart-body"),
-        cartBadge = document.querySelector(".cart-badge");
-    const deliveryToggleBtns = document.querySelectorAll(".delivery-btn");
-    const deliveryForm = document.getElementById("delivery-form-container"),
-        pickupForm = document.getElementById("pickup-form-container");
-    const trocoContainer = document.getElementById("troco-container");
-    const couponInput = document.getElementById("coupon-input"),
-        applyCouponBtn = document.getElementById("apply-coupon-btn"),
-        couponFeedback = document.getElementById("coupon-feedback");
-    const subtotalElem = document.getElementById("cart-subtotal"),
-        cartDiscountElem = document.getElementById("cart-discount"),
-        discountLineElem = document.querySelector(".discount-line"),
-        totalElem = document.getElementById("cart-total");
-    const finishOrderBtn = document.getElementById("finish-order-btn");
-    // Seletores da barra inferior
-    const viewCartBanner = document.querySelector(".view-cart-banner");
-    const bannerTotalElem = document.getElementById("banner-total");
-    const viewCartBannerBtn = document.querySelector(".view-cart-banner-btn");
-
-    // Seletores para o sistema de filtro
-    const categoryBtns = document.querySelectorAll(".category-btn");
-    const searchInput = document.querySelector(".search-input");
     const productsContainer = document.querySelector(".products-container");
-    const sizeSelector = document.querySelector(".size-selector");
+    const cartIcon = document.querySelector(".cart-icon");
+    const cartSidebar = document.querySelector(".cart-sidebar");
+    const cartOverlay = document.querySelector(".cart-overlay");
+    const closeCartBtn = document.querySelector(".close-cart-btn");
+    const cartBody = document.querySelector(".cart-body");
+    const cartBadge = document.querySelector(".cart-badge");
+    const totalElem = document.getElementById("cart-total");
+    const finishOrderBtn = document.getElementById("finish-order-btn");
+    const searchInput = document.querySelector(".search-input");
+    const categoryBtns = document.querySelectorAll(".category-btn");
+    const formContainer = document.getElementById("delivery-form-container");
+    const deliveryToggleBtns = document.querySelectorAll(".delivery-btn");
+    const productdescription = document.querySelector(".productdescription");
+    // Injetar Alerta Customizado
+    document.body.insertAdjacentHTML('beforeend', `
+        <div id="custom-alert" class="custom-alert">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <p style="font-weight:700; color:#0F172A;">Por favor, Escolha um tamanho!</p>
+            <button onclick="window.closeAlert()">ENTENDIDO</button>
+        </div>
+    `);
+    window.closeAlert = () => document.getElementById('custom-alert').classList.remove('show');
 
-    // --- ESTADO DA APLICAÇÃO ---
     const produtos = [
         {
-            id: 1,
-            nome: "Conjunto veludo",
-            categoria: "Conjuntos",
-            preco: 239.90,
-            tamanho: "Tamanho unico veste 34,42",
-            imagem:
-                "./assets/Conjunto veludo.jpg",
-            descricao: "Marrom",
-
+            id: 1, nome: "Calça Jeans", categoria: "Calças", descricao: "", preco: 129.90, imagens:
+                ["./assets/Calça jeans1.jpg", "./assets/Calça jeans2.jpg", "./assets/calça jeans3.jpg"]
         },
         {
-            id: 2,
-            nome: "Conjunto veludo",
-            categoria: "Conjuntos",
-            preco: 239.90,
-            tamanho: "Tamanho unico veste 34,42",
-            imagem:
-                "./assets/Conjunto veludo .jpeg",
-            descricao: "Branco",
+            id: 2, nome: "Calça legguing ", categoria: "Calças", descricao: "", preco: 119.90,
+            imagens: ["./assets/Calça legguing pezinho1.jpg", "./assets/Calça legguing pezinho2.jpg", "./assets/Calça legguing pezinho black.jpg", "./assets/Calça legguing pezinho3.jpg"]
         },
+        
         {
-            id: 3,
-            nome: "Calça legguing courino ",
-            categoria: "Calças",
-            preco: 149.90,
-            tamanho: "P, M, G,GG",
-            imagem:
-                "./assets/Calça legguing courino.jpg",
-            descricao: "Marrom,preto",
-
-        },
-        {
-            id: 4,
-            nome: "Calça jeans",
-            categoria: "Calças",
-            preco: 249.90,
-            tamanho: "Tamanho 38,40,42",
-            imagem:
-                "./assets/Calca jeans.jpg",
-            descricao: "Azul",
+            id: 3, nome: "Calça legguing ", categoria: "Calças", descricao: "", preco: 119.90,
+            imagens: ["./assets/Calça legguing courino2.jpg", "./assets/Calça legguing courino1.jpg", "./assets/Calça legguing black.jpg"]
         },
 
         {
-            id: 5,
-            nome: "Vestido em couro PU",
-            categoria: "Vestidos",
-            preco: 199.90,
-            tamanho: "M, G, GG",
-            imagem:
-                "./assets/Vestido em couro PU.jpg",
-            descricao: "Azul marinho,verde militar,preto",
+            id: 4, nome: "Conjuntos", categoria: "Conjuntos", descricao: "", preco: 239.90,
+            imagens: ["./assets/Conjunto.jpg", "./assets/Conjunto camurça.jpg", "./assets/Conjunto black.jpg"]
         },
-
+       
+      
         {
-            id: 6,
-            nome: "Vestido longo",
-            categoria: "Vestidos",
-            preco: 219.90,
-            tamanho: "Tamanho unico 34 ao 42",
-            imagem:
-                "./assets/Vestido longo.jpg",
-            descricao: "Verde militar,azul marinho,preto",
+            id: 5, nome: "Camiseta Corinthians Preta", categoria: "corinthians", descricao: "", preco: 79.90,
+            imagens: ["./assets/corinthians2.jpg", "./assets/corinthians2.jpg", "./assets/corinthians2.jpg"]
         },
         {
-            id: 7,
-            nome: "Blusa de frio",
-            categoria: "Blusas de frio",
-            preco: 319.90,
-            tamanho: "P, M, G,GG",
-            imagem:
-                "./assets/Blusa de frio.jpg",
-            descricao: "",
+            id: 6, nome: "Camiseta Corinthians Branca", categoria: "corinthians", descricao: "", preco: 79.90,
+            imagens: ["./assets/corinthians1.jpg", "./assets/corinthians1.jpg", "./assets/corinthians1.jpg"]
         },
         {
-            id: 8,
-            nome: "Jaqueta em trico ",
-            categoria: "Jaquetas",
-            preco: 319.90,
-            tamanho: "P, M, G",
-            imagem:
-                "./assets/Jaqueta em trico.jpg ",
-            descricao: "",
+            id: 7, nome: "Camiseta São Paulo", categoria: "sao-paulo", descricao: "", preco: 79.90,
+            imagens: ["./assets/sao-paulo.jpg", "./assets/sao-paulo.jpg", "./assets/sao-paulo.jpg"]
         },
         {
-            id: 9,
-            nome: "Jaqueta couro PU",
-            categoria: "Jaquetas",
-            preco: 299.90,
-            tamanho: "P, M, G,GG",
-            imagem:
-                "./assets/Jaqueta couro PU.jpg",
-            descricao: "Marrom,preto",
+            id: 8, nome: "Camiseta São Paulo Preta", categoria: "sao-paulo", preco: 79.90,
+            imagens: ["./assets/sao-paulo2.jpg", "./assets/sao-paulo2.jpg", "./assets/sao-paulo2.jpg"]
         },
         {
-            id: 10,
-            nome: "Conjunto ",
-            categoria: "Conjuntos",
-            preco: 299.90,
-            tamanho: "P, M, G",
-            imagem:
-                "./assets/Conjunto.jpg",
-            descricao: "off white,Marssala,preto",
+            id: 9, nome: "Camiseta Goiás Verde", categoria: "goias", preco: 79.90,
+            imagens: ["./assets/goias.jpg", "./assets/goias.jpg", "./assets/goias.jpg"]
         },
         {
-            id: 11,
-            nome: "Casaco lã batida",
-            categoria: "Jaquetas",
-            preco: 379.90,
-            tamanho: "P, M, G,GG",
-            imagem:
-                "./assets/Casaco lã batida .jpg",
-            descricao: "Marrom,nude e preto",
+            id: 10, nome: "Camiseta Goiás Branca", categoria: "goias", preco: 79.90,
+            imagens: ["./assets/goias2.jpg", "./assets/goias2.jpg", "./assets/goias2.jpg"]
         },
         {
-            id: 12,
-            nome: "Blusa de gola",
-            categoria: "Blusas de frio",
-            preco: 239.90,
-            tamanho: "Veste (tamanho unico)",
-            imagem:
-                "./assets/Blusa de gola.jpg",
-            descricao: "off-white",
+            id: 11, nome: "Camiseta Vila Nova", categoria: "vila-nova", preco: 79.90,
+            imagens: ["./assets/vila-nova.jpg", "./assets/vila-nova.jpg", "./assets/vila-nova.jpg"]
         },
         {
-            id: 13,
-            nome: "Saia mini suede",
-            categoria: "Vestidos",
-            preco: 169.90,
-            tamanho: "Veste (tamanho unico)",
-            imagem:
-                "./assets/Saia mini suede .jpg",
-            descricao: "Areia,marrom,Preta",
+            id: 12, nome: "Camiseta Vila Nova Branca", categoria: "vila-nova", preco: 79.90,
+            imagens: ["./assets/vila-nova2.jpg", "./assets/vila-nova2.jpg", "./assets/vila-nova2.jpg",]
         },
         {
-            id: 14,
-            nome: "Bolsa mini ",
-            categoria: "Bolsas",
-            preco: 89.90,
-            tamanho: "Padrao",
-            imagem:
-                "./assets/Bolsa mini.jpg",
-            descricao: "Branco",
+            id: 10, nome: "Camiseta Brasil Amarela", categoria: "brasil", preco: 89.90,
+            imagens: ["./assets/brasil1.jpg", "./assets/brasil1.jpg", "./assets/brasil1.jpg"]
         },
         {
-            id: 15,
-            nome: "Mini bolsa ",
-            categoria: "Bolsas",
-            preco: 89.90,
-            tamanho: "Padrao",
-            imagem:
-                "./assets/Mini bolsa.jpg",
-            descricao: "Marrom",
+            id: 11, nome: "Camiseta Brasil Branca", categoria: "brasil", preco: 89.90,
+            imagens: ["./assets/brasil2.jpg", "./assets/brasil3.jpg", "./assets/brasil2.jpg"]
         },
         {
-            id: 16,
-            nome: "Legguing de pezinho ",
-            categoria: "Calças",
-            preco: 89.90,
-            tamanho: "P, M, G,GG",
-            imagem:
-                "./assets/Legguing de pezinho.jpg",
-            descricao: "Marrom,preto",
+            id: 12, nome: "Camiseta Brasil Preta", categoria: "brasil", preco: 89.90,
+            imagens: ["./assets/calca legguing courino.jpg", "./assets/blusa de frio.jpg", "./assets/blusa de frio.jpg"]
         },
-         {
-            id: 17,
-            nome: "Calça jeans",
-            categoria: "Calças",
-            preco: 119.90,
-            tamanho: "Veste 38,40,42",
-            imagem:
-                "./assets/Calça jeans.jpg",
-            descricao: "azul",
+        {
+            id: 13, nome: "Camiseta Brasil Preta", categoria: "brasil", preco: 89.90,
+            imagens: ["./assets/calca legguing courino.jpg", "./assets/blusa de frio.jpg", "./assets/blusa de frio.jpg"]
         },
-         {
-            id: 18,
-            nome: "Blusa masculina",
-            categoria: "Blusas",
-            preco: 89.90,
-            tamanho: "P,M,G",
-            imagem:
-                "./assets/Blusa masculina.jpg ",
-            descricao: "Preta ",
+        {
+            id: 14, nome: "Camiseta Brasil Preta", categoria: "brasil", preco: 89.90,
+            imagens: ["./assets/calca legguing courino.jpg", "./assets/blusa de frio.jpg ", "./assets/blusa de frio.jpg"]
         },
-         {
-            id: 19,
-            nome: "Calça masculina",
-            categoria: "Calças",
-            preco: 119.90,
-            tamanho: "Veste 38,40,42",
-            imagem:
-                "./assets/Calça masculina.jpg",
-            descricao: "Azul",
-        },
-         {
-            id: 20,
-            nome: "Relogio masculino",
-            categoria: "Acessòrios",
-            preco: 99.90,
-            tamanho: "",
-            imagem:
-                "./assets/Relogio masculino.jpg",
-            descricao: "",
+        {
+            id: 15, nome: "Camiseta Brasil Preta", categoria: "brasil", preco: 89.90,
+            imagens: ["./assets/calca legguing courino.jpg", "./assets/blusa de frio.jpg ", "./assets/blusa de frio.jpg "]
         },
 
     ];
-    const validCoupons = [{ code: "DESCONTO10", type: "percentage", value: 10 }];
-    let carrinho = [],
-        tipoEntrega = "delivery",
-        appliedCoupon = null;
 
-    // Variáveis de estado para filtros
-    let categoriaAtiva = "all";
-    let termoBusca = "";
 
-    const formatarMoeda = (v) =>
-        v.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
-    const getScrollbarWidth = () =>
-        window.innerWidth - document.documentElement.clientWidth;
-    const lockScroll = () => {
-        document.body.style.paddingRight = `${getScrollbarWidth()}px`;
-        document.body.classList.add("no-scroll");
-    };
-    const unlockScroll = () => {
-        document.body.style.paddingRight = "";
-        document.body.classList.remove("no-scroll");
-    };
-    const abrirCarrinho = () => {
-        cartSidebar.classList.add("show");
-        cartOverlay.classList.add("show");
-        lockScroll();
-    };
-    const fecharCarrinho = () => {
-        cartSidebar.classList.remove("show");
-        cartOverlay.classList.remove("show");
-        unlockScroll();
+    let carrinho = [];
+    let filtroCategoria = "all";
+    let filtroBusca = "";
+    let tipoEntregaAtivo = "delivery";
+
+    const formatarMoeda = (v) => v.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+
+    window.changeImg = (el, src) => {
+        const card = el.closest(".product-card");
+        const main = card.querySelector(".product-img");
+        main.style.opacity = "0";
+        setTimeout(() => { main.src = src; main.style.opacity = "1"; }, 200);
+        card.querySelectorAll(".thumb-img").forEach(t => t.classList.remove("active"));
+        el.classList.add("active");
     };
 
-    const animacaoVoarParaCarrinho = (productCard) => {
-        const productImg = productCard.querySelector(".product-img"),
-            imgRect = productImg.getBoundingClientRect(),
-            cartRect = cartIcon.getBoundingClientRect(),
-            flyingImg = document.createElement("img");
-        flyingImg.src = productImg.src;
-        flyingImg.classList.add("product-image-fly");
-        flyingImg.style.left = `${imgRect.left}px`;
-        flyingImg.style.top = `${imgRect.top}px`;
-        flyingImg.style.width = `${imgRect.width}px`;
-        flyingImg.style.height = `${imgRect.height}px`;
-        document.body.appendChild(flyingImg);
-        requestAnimationFrame(() => {
-            flyingImg.style.left = `${cartRect.left + cartRect.width / 2}px`;
-            flyingImg.style.top = `${cartRect.top + cartRect.height / 2}px`;
-            flyingImg.style.width = "0px";
-            flyingImg.style.height = "0px";
-            flyingImg.style.opacity = "0";
+    window.selectSize = (btn, size) => {
+        const parent = btn.parentElement;
+        parent.querySelectorAll('.size-btn').forEach(b => b.classList.remove('selected', 'size-error'));
+        btn.classList.add('selected');
+        parent.dataset.selectedSize = size;
+    };
+
+    const animarVoo = (card) => {
+        const img = card.querySelector(".product-img");
+        const rect = img.getBoundingClientRect();
+        const cartRect = cartIcon.getBoundingClientRect();
+        const clone = img.cloneNode();
+        Object.assign(clone.style, {
+            position: 'fixed', top: rect.top + 'px', left: rect.left + 'px',
+            width: rect.width + 'px', height: rect.height + 'px',
+            zIndex: '9999', borderRadius: '15px', pointerEvents: 'none', objectFit: 'cover'
         });
-        flyingImg.addEventListener("transitionend", () => flyingImg.remove());
+        document.body.appendChild(clone);
+        const anim = clone.animate([
+            { top: rect.top + 'px', left: rect.left + 'px', width: rect.width + 'px', opacity: 0.8 },
+            { top: cartRect.top + 'px', left: cartRect.left + 'px', width: '15px', height: '15px', opacity: 0 }
+        ], { duration: 800, easing: 'ease-in-out' });
+        anim.onfinish = () => {
+            clone.remove();
+            cartIcon.classList.add('bump');
+            setTimeout(() => cartIcon.classList.remove('bump'), 300);
+        };
     };
 
-    // Função para filtrar e mostrar produtos
-    const filtrarEMostrarProdutos = () => {
-        let produtosFiltrados = produtos;
+    const renderProdutos = () => {
 
-        // Filtro por categoria
-        if (categoriaAtiva !== "all") {
-            produtosFiltrados = produtosFiltrados.filter(
-                (produto) => produto.categoria === categoriaAtiva,
-            );
-        }
+        const filtrados = produtos.filter(p => (p.nome + p.categoria + p.descricao)
+            .toLowerCase().includes(filtroBusca.toLowerCase()) && (filtroCategoria === "all" || p.categoria === filtroCategoria));
+        productsContainer.innerHTML = filtrados.map(p => `
 
-        // Filtro por busca
-        if (termoBusca.trim() !== "") {
-            const termo = termoBusca.toLowerCase();
-            produtosFiltrados = produtosFiltrados.filter(
-                (produto) =>
-                    produto.nome.toLowerCase().includes(termo) ||
-                    produto.descricao.toLowerCase().includes(termo),
-            );
-        }
-
-        // Renderizar produtos filtrados
-        const container = document.querySelector(".products-container");
-        if (produtosFiltrados.length === 0) {
-            container.innerHTML = `
-                        <div style="grid-column: 1 / -1; text-align: center; padding: 3rem; color: #999;">
-                            <i class="fa-solid fa-box-open" style="font-size: 3rem; margin-bottom: 1rem;"></i>
-                            <p style="font-size: 1.2rem; font-weight: 600;">Nenhum produto encontrado</p>
-                        </div>
-                    `;
-        } else {
+            <div class="product-card" data-id="${p.id}">
+                <img src="${p.imagens[0]}" class="product-img">
+                
+                <div class="product-images-nav">${p.imagens.map((img, i) => `<img src="${img}" class="thumb-img 
+                ${i === 0 ? 'active' : ''}" onclick="changeImg(this, '${img}')">`).join('')}</div>
+                
+                <div class="product-info">
+                    <h3>${p.nome}</h3>
 
 
-            container.innerHTML = produtosFiltrados
-                .map(
-                    (p) => `
-                        <div class="product-card" data-id="${p.id}">
-                            <img class="product-img" src="${p.imagem}" alt="${p.nome}">
-                            <div class="product-info">
-                                <h3 class="product-name">${p.nome}</h3>
-                           <p class="product-tamanho">${p.tamanho}</p>
-                            
-                                <p class="product-description">${p.descricao}</p>
-                                <p class="product-price">${formatarMoeda(p.preco)}</p>
-                              
+               
+               
+                       
+                   
+                 <div class="size-selector" data-selected-size="">
+
+
+     ${(p.id === 1 || p.id === 2 || p.id === 3) ?
+                `<button class="size-btn" onclick="selectSize(this,'38')">38</button>
+                        <button class="size-btn" onclick="selectSize(this, '40')">40</button>
+                        <button class="size-btn" onclick="selectSize(this, '42')">42</button><p "
+                         class="size-selector" data-selected-size="">
+                         </p>${p.descricao}</p>` : ''}
+        
+
+                       ${(p.id === 4 || p.id === 5 || p.id === 6 || p.id === 7) ?
+                `<button class="size-btn" onclick="selectSize(this,'P')">P</button>
+                        <button class="size-btn" onclick="selectSize(this, 'M')">M</button>
+                        <button class="size-btn" onclick="selectSize(this, 'G')">G</button>
+                        <button class="size-btn" onclick="selectSize(this, 'GG')">GG</button><p "
+                       ><p>${p.descricao}</p>` : ''}
+        
+                       
                     </div>
-                                <button class="product-button">Comprar</button>
-                            </div>
-                        </div>
-                    `,
-                )
-                .join("");
-
-        }
-        const buttons = sizeSelector.querySelectorAll('.size-btn');
-        buttons.forEach(btn => {
-            btn.classList.remove('selected');
-            parent.dataset.selectedSize = size - btn;// Remover a classe de estilo para não selecionado
-        });
-
+                     
+                 
+                    <p class="product-price">${formatarMoeda(p.preco)}</p>
+                    <button class="product-button">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        `).join("");
     };
 
-    const adicionarAoCarrinho = (produtoId, productCard) => {
-        if (productCard) animacaoVoarParaCarrinho(productCard);
-        const produto = produtos.find((p) => p.id === produtoId),
-            itemNoCarrinho = carrinho.find((item) => item.id === produtoId);
-        if (itemNoCarrinho) itemNoCarrinho.quantidade++;
-        else carrinho.push({ ...produto, quantidade: 1 });
-        atualizarCarrinho();
-    };
-
-    const alterarQuantidade = (produtoId, acao) => {
-        const item = carrinho.find((i) => i.id === produtoId);
-        if (!item) return;
-        if (acao === "aumentar") item.quantidade++;
-        else if (acao === "diminuir") {
-            item.quantidade--;
-            if (item.quantidade <= 0)
-                carrinho = carrinho.filter((i) => i.id !== produtoId);
-        }
-        atualizarCarrinho();
-    };
-
-    const atualizarCarrinho = () => {
+    const atualizarCarrinhoUI = () => {
         if (carrinho.length === 0) {
-            cartBody.innerHTML = `<div class="cart-empty"><i class="fa-solid fa-box-open"></i><p>Seu carrinho está vazio.</p></div>`;
+            cartBody.innerHTML = `<div style="text-align:center; padding:50px 20px; color:#94a3b8;"><p>Carrinho vazio</p></div>`;
         } else {
-            cartBody.innerHTML = carrinho
-                .map(
-                    (item) =>
-                        `<div class="cart-item" data-id="${item.id}"><img src="${item.imagem}" alt="${item.nome}" class="cart-item-img"><div class="cart-item-info"><h4 class="cart-item-name">${item.nome}</h4><p class="cart-item-price">${formatarMoeda(item.preco)}</p><div class="cart-item-controls"><button class="quantity-btn" data-action="diminuir">-</button><span class="quantity">${item.quantidade}</span><button class="quantity-btn" data-action="aumentar">+</button></div></div><button class="remove-item-btn">&times;</button></div>`,
-                )
-                .join("");
+            cartBody.innerHTML = carrinho.map((item, index) => `
+                <div class="cart-item">
+                    <img src="${item.img}">
+                    <div style="flex:1">
+                        <p style="font-weight:800; font-size:0.95rem; color:var(--secondary-color);">${item.nome}</p>
+                        <p style="font-size:0.8rem; color:#64748b;">Tam: ${item.tamanho} | ${item.qtd}x</p>
+                        <p style="font-weight:700; color:var(--primary-color);">${formatarMoeda(item.preco * item.qtd)}</p>
+                    </div>
+                    <button onclick="window.removeItem(${index})" class="close-cart-btn" style="width:30px;height:30px;background:none;color:red;">&times;</button>
+                </div>`).join("");
         }
-        const subtotal = carrinho.reduce(
-            (acc, item) => acc + item.preco * item.quantidade,
-            0,
-        );
-        let discountAmount = 0;
-        if (appliedCoupon && appliedCoupon.type === "percentage")
-            discountAmount = subtotal * (appliedCoupon.value / 100);
-        const total = subtotal - discountAmount;
-        subtotalElem.textContent = formatarMoeda(subtotal);
-        if (discountAmount > 0) {
-            cartDiscountElem.textContent = `- ${formatarMoeda(discountAmount)}`;
-            discountLineElem.style.display = "flex";
-        } else {
-            discountLineElem.style.display = "none";
-        }
-        totalElem.textContent = formatarMoeda(total);
-        cartBadge.textContent = carrinho.reduce(
-            (acc, item) => acc + item.quantidade,
-            0,
-        );
+        totalElem.innerText = formatarMoeda(carrinho.reduce((acc, i) => acc + (i.preco * i.qtd), 0));
+        cartBadge.innerText = carrinho.reduce((acc, i) => acc + i.qtd, 0);
         finishOrderBtn.disabled = carrinho.length === 0;
-
-        if (carrinho.length > 0 && window.innerWidth <= 768) {
-            bannerTotalElem.textContent = formatarMoeda(total);
-            viewCartBanner.classList.add("show");
-        } else {
-            viewCartBanner.classList.remove("show");
-        }
     };
 
-    const applyCoupon = () => {
-        const code = couponInput.value.trim().toUpperCase(),
-            foundCoupon = validCoupons.find((c) => c.code === code);
-        couponFeedback.classList.remove("success", "error")
-        if (foundCoupon) {
-            appliedCoupon = foundCoupon;
-            couponFeedback.textContent = "Cupom aplicado!";
-            couponFeedback.classList.add("success");
-        } else {
-            appliedCoupon = null;
-            couponFeedback.textContent = "Cupom inválido.";
-            couponFeedback.classList.add("error");
+    window.removeItem = (index) => { carrinho.splice(index, 1); atualizarCarrinhoUI(); };
+
+    productsContainer.addEventListener("click", (e) => {
+        if (e.target.classList.contains("product-button")) {
+            const card = e.target.closest(".product-card");
+            const tamanho = card.querySelector(".size-selector").dataset.selectedSize;
+            if (!tamanho) return document.getElementById('custom-alert').classList.add('show');
+            const p = produtos.find(i => i.id === parseInt(card.dataset.id));
+            animarVoo(card);
+            const noCart = carrinho.find(i => i.id === p.id && i.tamanho === tamanho);
+            if (noCart) noCart.qtd++;
+            else carrinho.push({ ...p, img: card.querySelector('.product-img').src, qtd: 1, tamanho });
+            setTimeout(atualizarCarrinhoUI, 300);
         }
-        atualizarCarrinho();
+    });
+
+    const atualizarFormulario = (tipo) => {
+        tipoEntregaAtivo = tipo;
+        formContainer.innerHTML = tipo === "delivery" ? `
+            <div class="form-group"><label>Nome Completo</label><input type="text" id="cust-name"></div>
+            <div class="form-group"><label>Endereço</label><textarea id="cust-addr"></textarea></div>` : `
+            <div class="form-group"><label>Nome para Retirada</label><input type="text" id="cust-name"></div>`;
     };
 
-    const finalizarPedido = () => {
-        let valid = true;
-        let fieldsToValidate = [];
+    searchInput.oninput = (e) => { filtroBusca = e.target.value; renderProdutos(); };
+    deliveryToggleBtns.forEach(btn => btn.onclick = () => {
+        deliveryToggleBtns.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        atualizarFormulario(btn.dataset.option);
+    });
+    categoryBtns.forEach(btn => btn.onclick = () => {
+        categoryBtns.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        filtroCategoria = btn.dataset.category;
+        renderProdutos();
+    });
+    cartIcon.onclick = () => { cartSidebar.classList.add("show"); cartOverlay.classList.add("show"); };
+    closeCartBtn.onclick = () => { cartSidebar.classList.remove("show"); cartOverlay.classList.remove("show"); };
+    cartOverlay.onclick = () => closeCartBtn.onclick();
 
-        if (tipoEntrega === "delivery") {
-            fieldsToValidate = [
-                "delivery-name",
-                "delivery-phone",
-                "delivery-cep",
-                "delivery-address",
-            ];
-        } else {
-            fieldsToValidate = ["pickup-name", "pickup-date", "pickup-time"];
-        }
-
-        fieldsToValidate.forEach((id) => {
-            const el = document.getElementById(id);
-            let isFieldValid = el.value.trim() !== "";
-
-            if (id.includes("name") && isFieldValid) {
-                if (
-                    el.value
-                        .trim()
-                        .split(" ")
-                        .filter((word) => word).length < 2
-                ) {
-                    isFieldValid = false;
-                }
-            }
-
-            if (!isFieldValid) {
-                el.classList.add("error");
-                valid = false;
-            } else {
-                el.classList.remove("error");
-            }
-        });
-
-        if (!valid) {
-            alert(
-                "Por favor, preencha todos os campos obrigatórios marcados em vermelho.",
-            );
-            return;
-        }
-
-        const numeroWhatsApp = "15998494383";
-        const itensPedido = carrinho
-            .map((item) => `  - ${item.quantidade}x ${item.nome}`)
-            .join("\n");
-        const subtotal = carrinho.reduce(
-            (acc, item) => acc + item.preco * item.quantidade,
-            0,
-        );
-        let discountAmount = 0,
-            cupomInfo = "";
-        if (appliedCoupon) {
-            discountAmount = subtotal * (appliedCoupon.value / 100);
-            cupomInfo = `\n*Cupom Aplicado:* ${appliedCoupon.code} (${formatarMoeda(discountAmount)})`;
-        }
-        const total = subtotal - discountAmount;
-        let mensagem = `*= NOVO PEDIDO = *\n\n*Itens:*\n${itensPedido}\n\n*Subtotal:* ${formatarMoeda(subtotal)}${cupomInfo}\n*Total:* ${formatarMoeda(total)}\n\n-------------------------\n\n`;
-
-        if (tipoEntrega === "delivery") {
-            const nome = document.getElementById("delivery-name").value;
-            const phone = document.getElementById("delivery-phone").value;
-            const address = document.getElementById("delivery-address").value;
-
-            const paymentMethod = document.querySelector(
-                'input[name="payment"]:checked',
-            ).value;
-            let paymentInfo = `*Forma de Pagamento:* ${paymentMethod}`;
-            if (paymentMethod === "Dinheiro") {
-                const troco = document.getElementById("troco-para").value;
-                paymentInfo += troco
-                    ? ` (Troco para R$ ${troco})`
-                    : " (Não precisa de troco)";
-            }
-            mensagem += `*Tipo de Pedido:* Entrega\n\n*Nome:* ${nome}\n*Telefone:* ${phone}\n*Endereço:* ${address}\n\n${paymentInfo}`;
-        } else {
-            const nome = document.getElementById("pickup-name").value;
-            const dataInput = document.getElementById("pickup-date").value;
-            const hora = document.getElementById("pickup-time").value;
-            const [year, month, day] = dataInput.split("-");
-            const dataFormatada = `${day}/${month}/${year}`;
-
-            mensagem += `*Tipo de Pedido:* Retirada\n\n*Nome para Retirada:* ${nome}\n*Data Agendada:* ${dataFormatada}\n*Hora Agendada:* ${hora}`;
-        }
-
-        const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
-        window.open(url,"_blank");
+    finishOrderBtn.onclick = () => {
+        const nome = document.getElementById("cust-name").value;
+        if (!nome) return alert("Preencha seu nome!");
+        const itensMsg = carrinho.map(i => `- ${i.qtd}x ${i.nome} (${i.tamanho})`).join('\n');
+        const msg = `*F7 GRIFES - NOVO PEDIDO*\nwww.taimodas.com\nCliente: ${nome}\nTotal: ${totalElem.innerText}\nItens:\n${itensMsg}`;
+        window.open(`https://wa.me/556293275790?text=${encodeURIComponent(msg)}`);
     };
 
-    // --- EVENT LISTENERS ---
-    cartIcon.addEventListener("click", abrirCarrinho);
-    closeCartBtn.addEventListener("click", fecharCarrinho);
-    cartOverlay.addEventListener("click", fecharCarrinho);
-    applyCouponBtn.addEventListener("click", applyCoupon);
-    finishOrderBtn.addEventListener("click", finalizarPedido);
-    viewCartBannerBtn.addEventListener("click", abrirCarrinho);
-
-    // Event listener para botões de categoria
-    categoryBtns.forEach((btn) => {
-        btn.addEventListener("click", () => {
-            // Remove classe active de todos os botões
-            categoryBtns.forEach((b) => b.classList.remove("active"));
-            // Adiciona classe active no botão clicado
-            btn.classList.add("active");
-            // Atualiza categoria ativa
-            categoriaAtiva = btn.dataset.category;
-            // Filtra e mostra produtos
-            filtrarEMostrarProdutos();
-        });
-    });
-
-    // Event listener para campo de busca
-    searchInput.addEventListener("input", (e) => {
-        termoBusca = e.target.value;
-        filtrarEMostrarProdutos();
-    });
-
-    document
-        .querySelector(".products-container")
-        .addEventListener("click", (e) => {
-            if (e.target.matches(".product-button")) {
-                const productCard = e.target.closest(".product-card");
-                adicionarAoCarrinho(
-                    Number.parseInt(productCard.dataset.id),
-                    productCard,
-                );
-            }
-        });
-    cartBody.addEventListener("click", (e) => {
-        const cartItem = e.target.closest(".cart-item");
-        if (cartItem) {
-            const produtoId = Number.parseInt(cartItem.dataset.id);
-            if (e.target.matches(".quantity-btn"))
-                alterarQuantidade(produtoId, e.target.dataset.action);
-            if (e.target.matches(".remove-item-btn")) {
-                carrinho = carrinho.filter((i) => i.id !== produtoId);
-                atualizarCarrinho();
-            }
-        }
-    });
-
-    deliveryToggleBtns.forEach((btn) =>
-        btn.addEventListener("click", () => {
-            deliveryToggleBtns.forEach((b) => b.classList.remove("active"));
-            btn.classList.add("active");
-            tipoEntrega = btn.dataset.option;
-            if (tipoEntrega === "delivery") {
-                deliveryForm.style.display = "block";
-                pickupForm.style.display = "none";
-            } else {
-                deliveryForm.style.display = "none";
-                pickupForm.style.display = "block";
-            }
-        }),
-    );
-
-    document.querySelectorAll('input[name="payment"]').forEach((radio) => {
-        radio.addEventListener("change", (e) => {
-            trocoContainer.style.display =
-                e.target.value === "Dinheiro" ? "block" : "none";
-            document
-                .querySelectorAll(".payment-option")
-                .forEach((label) => label.classList.remove("selected"));
-            e.target.closest(".payment-option").classList.add("selected");
-        });
-    });
-
-    // Remove o erro ao digitar
-    document
-        .querySelectorAll(
-            "#delivery-form-container input[required], #pickup-form-container input[required], #pickup-form-container select[required]",
-        )
-        .forEach((input) => {
-            input.addEventListener("input", () => {
-                if (input.value.trim() !== "") input.classList.remove("error");
-            });
-        });
-
-    // --- INICIALIZAÇÃO ---
-    filtrarEMostrarProdutos();
-    atualizarCarrinho();
+    renderProdutos();
+    atualizarFormulario("delivery");
 });

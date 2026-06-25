@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", () => {
                          </p>${p.descricao}</p>` : ''}
         
 
-                       ${(p.id === 4 || p.id === 5 || p.id === 6 || p.id === 7 || p.id === 10 || p.id === 11 || p.id === 12 ) ?
+                       ${(p.id === 4 || p.id === 5 || p.id === 6 || p.id === 7 || p.id === 10 || p.id === 11 || p.id === 12 || p.id === 13 || p.id === 14 || p.id === 15 ) ?
                 `<button class="size-btn" onclick="selectSize(this,'P')">P</button>
                         <button class="size-btn" onclick="selectSize(this, 'M')">M</button>
                         <button class="size-btn" onclick="selectSize(this, 'G')">G</button>

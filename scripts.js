@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         {
             id: 5, nome: "Blusas alongadas", categoria: "blusas de frio", descricao: "", preco: 169.90,
-            imagens: ["./assets/Blusa alongada1.jpg", "./assets/Blusa alongada2.jpg", "./assets/Blusa alongada3.jpg"]
+            imagens: ["./assets/Blusa alongada.jpg", "./assets/Blusa alongada1.jpg", "./assets/Blusa alongada2.jpg", "./assets/Blusa alongada3.jpg"]
         },
 
         {
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
             imagens: ["./assets/Calça virginia1.jpg", "./assets/Calça virginia2.jpg"]
         },
         {
-            id: 9, nome: "Casaco courino/Casaco lã batida", categoria: "jaquetas", descricao: "", preco: 299.90,
+            id: 9, nome: "Casaco courino/Casaco lã batida", categoria: "Jaquetas", descricao: "", preco: 299.90,
             imagens: ["./assets/casaco courino.jpg", "./assets/casaco la batida.jpg"]
         },
         {
@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", () => {
                          </p>${p.descricao}</p>` : ''}
         
 
-                       ${(p.id === 4 || p.id === 5 || p.id === 6 || p.id === 7 || p.id === 10 || p.id === 11 || p.id === 12 || p.id === 13 || p.id === 14 || p.id === 15 ) ?
+                       ${(p.id === 4 || p.id === 5 || p.id === 6 || p.id === 7 || p.id === 10 || p.id === 11 || p.id === 12 ) ?
                 `<button class="size-btn" onclick="selectSize(this,'P')">P</button>
                         <button class="size-btn" onclick="selectSize(this, 'M')">M</button>
                         <button class="size-btn" onclick="selectSize(this, 'G')">G</button>
@@ -177,6 +177,12 @@ document.addEventListener("DOMContentLoaded", () => {
                        ><p>${p.descricao}</p>` : ''}
         
                        
+                       ${(p.id === 13 || p.id === 14 || p.id === 15 ) ?
+                `<button class="size-btn" onclick="selectSize(this,'P')">P</button>
+                        <button class="size-btn" onclick="selectSize(this, 'M')">M</button>
+                        <button class="size-btn" onclick="selectSize(this, 'G')">G</button>
+                       
+                       <p>${p.descricao}</p>` : ''}
                     </div>
                      
                  

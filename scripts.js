@@ -78,15 +78,15 @@ document.addEventListener("DOMContentLoaded", () => {
             imagens: ["./assets/Mini saia1.jpg", "./assets/Mini saia.jpg", "./assets/Mini saia2.jpg", "./assets/Mini saia3.jpg"]
         },
         {
-            id: 10, nome: "Vestido longo", categoria: "Vestidos", descricao: "", preco: 149.90,
+            id: 13, nome: "Vestido longo", categoria: "Vestidos", descricao: "", preco: 149.90,
             imagens: ["./assets/vestido longo1.jpg", "./assets/vestido longo2.jpg"]
         },
         {
-            id: 11, nome: "Conjunto moletom com gola ou ziper", categoria: "conjuntos", descricao: "", preco: 449.90,
+            id: 14, nome: "Conjunto moletom com gola ou ziper", categoria: "conjuntos", descricao: "", preco: 449.90,
             imagens: ["./assets/Conjunto moletom.jpg", "./assets/.jpg", "./assets/.jpg"]
         },
         {
-            id: 12, nome: "Calça jeans", categoria: "Calça", descricao: "", preco: 149.90,
+            id: 15, nome: "Calça jeans", categoria: "Calça", descricao: "", preco: 149.90,
             imagens: ["./assets/Calça-jeans1.jpg", "./assets/.jpg", "./assets/.jpg"]
         },
       

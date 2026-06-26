@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
 
         {
-            id: 6, nome: "Conjuntos ponche", categoria: "Conjuntos", descricao: "", preco: 199.90,
+            id: 6, nome: "Conjuntos ponche", categoria: "Conjuntos", descricao: "", preco: 239.90,
             imagens: ["./assets/Conjunto white.jpg", "./assets/Conjunto white.jpg", "./assets/Conjunto ponche.jpg", "./assets/Conjunto ponche1.jpg"]
         },
         {

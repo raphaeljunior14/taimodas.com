@@ -82,12 +82,12 @@ document.addEventListener("DOMContentLoaded", () => {
             imagens: ["./assets/vestido longo1.jpg", "./assets/vestido longo2.jpg"]
         },
         {
-            id: 14, nome: "Conjunto moletom com gola ou ziper", categoria: "conjuntos", descricao: "", preco: 449.90,
-            imagens: ["./assets/Conjunto moletom.jpg", "./assets/.jpg", "./assets/.jpg"]
+            id: 14, nome: "Calça moletom", categoria: "Calças", descricao: "", preco: 210.00,
+            imagens: ["./assets/Blusa moletom.jpg", "./assets/Calça moletom1.jpg", "./assets/.jpg"]
         },
         {
-            id: 15, nome: "Calça jeans", categoria: "Calça", descricao: "", preco: 149.90,
-            imagens: ["./assets/Calça-jeans1.jpg", "./assets/.jpg", "./assets/.jpg"]
+            id: 15, nome: "Blusa moletom", categoria: "Blusas de frio", descricao: "", preco: 189.90,
+            imagens: ["./assets/Blusa moletom1.jpg", "./assets/Conjunto moletom1.jpg"]
         },
       
     ];
@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", () => {
                          </p>${p.descricao}</p>` : ''}
         
 
-                       ${(p.id === 4 || p.id === 5 || p.id === 6 || p.id === 7 || p.id === 10 || p.id === 11 || p.id === 12 ) ?
+                       ${(p.id === 4 || p.id === 5 || p.id === 6 || p.id === 7 || p.id === 10 || p.id === 11 || p.id === 12 || p.id === 14 || p.id === 15  ) ?
                 `<button class="size-btn" onclick="selectSize(this,'P')">P</button>
                         <button class="size-btn" onclick="selectSize(this, 'M')">M</button>
                         <button class="size-btn" onclick="selectSize(this, 'G')">G</button>
@@ -177,7 +177,7 @@ document.addEventListener("DOMContentLoaded", () => {
                        ><p>${p.descricao}</p>` : ''}
         
                        
-                       ${(p.id === 13 || p.id === 14 || p.id === 15 ) ?
+                       ${(p.id === 13 ) ?
                 `<button class="size-btn" onclick="selectSize(this,'P')">P</button>
                         <button class="size-btn" onclick="selectSize(this, 'M')">M</button>
                         <button class="size-btn" onclick="selectSize(this, 'G')">G</button>

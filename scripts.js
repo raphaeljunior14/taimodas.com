@@ -257,7 +257,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const nome = document.getElementById("cust-name").value;
         if (!nome) return alert("Preencha seu nome!");
         const itensMsg = carrinho.map(i => `- ${i.qtd}x ${i.nome} (${i.tamanho})`).join('\n');
-        const msg = `*F7 GRIFES - NOVO PEDIDO*\nwww.taimodas.com\nCliente: ${nome}\nTotal: ${totalElem.innerText}\nItens:\n${itensMsg}`;
+        const msg = `*Tai Modas - NOVO PEDIDO*\nwww.taimodas.com\nCliente: ${nome}\nTotal: ${totalElem.innerText}\nItens:\n${itensMsg}`;
         window.open(`https://wa.me/556293275790?text=${encodeURIComponent(msg)}`);
     };
 

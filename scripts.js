@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         {
             id: 2, nome: "Calça Jeans", categoria: "Calças", descricao: "", preco: 129.90, imagens:
-                ["./assets/Calça jeans1.jpg", "./assets/Calça jeans2.jpg", "./assets/calça jeans3.jpg"]
+                ["./assets/Calça jeans1.jpg", "./assets/Calça jeans2.jpg", "./assets/Calça jeans3.jpg"]
         },
 
         {
@@ -66,12 +66,12 @@ document.addEventListener("DOMContentLoaded", () => {
             imagens: ["./assets/casaco courino.jpg", "./assets/casaco la batida.jpg"]
         },
         {
-            id: 10, nome: "Jaqueta em couro Pu", categoria: "jaquetas", descricao: "", preco: 299.90,
-            imagens: ["./assets/jaqueta de couro.jpg", "./assets/jaqueta em couro Pu.jpg"]
+            id: 10, nome: "Jaqueta em couro Pu", categoria: "Jaquetas", descricao: "", preco: 299.90,
+            imagens: ["./assets/jaqueta de couro.jpg", "./assets/jaqueta em couro PU.jpg"]
         },
         {
-            id: 11, nome: "Jaqueta veludo", categoria: "jaquetas", descricao: "", preco: 329.90,
-            imagens: ["./assets/Jaqueta veludo.jpg", "./assets/Jaqueta white.jpg"]
+            id: 11, nome: "Jaqueta veludo", categoria: "Jaquetas", descricao: "", preco: 329.90,
+            imagens: ["./assets/jaqueta veludo.jpg", "./assets/jaqueta white.jpg"]
         },
         {
             id: 12, nome: "Mini saia ", categoria: "Saia", descricao: "", preco: 179.90,
@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
             id: 13, nome: "Vestido longo", categoria: "Vestidos", descricao: "", preco: 149.90,
-            imagens: ["./assets/vestido longo1.jpg", "./assets/vestido longo2.jpg"]
+            imagens: ["./assets/Vestido longo1.jpg", "./assets/vestido longo2.jpg"]
         },
         {
             id: 14, nome: "Calça moletom", categoria: "Calças", descricao: "", preco: 210.00,

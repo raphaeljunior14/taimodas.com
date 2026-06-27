@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
             id: 9, nome: "Casaco courino/Casaco lã batida", categoria: "Jaquetas", descricao: "", preco: 299.90,
-            imagens: ["./assets/casaco courino.jpg", "./assets/casaco la batida.jpg"]
+            imagens: ["./assets/Casaco courino.jpg", "./assets/Casaco la batida.jpg"]
         },
         {
             id: 10, nome: "Jaqueta em couro Pu", categoria: "Jaquetas", descricao: "", preco: 299.90,

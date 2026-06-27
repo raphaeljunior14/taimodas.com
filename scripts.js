@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
             imagens: ["./assets/Calça virginia1.jpg", "./assets/Calça virginia2.jpg"]
         },
         {
-            id: 9, nome: "Casaco courino/Casaco lã batida", categoria: "Jaquetas", descricao: "", preco: 299.90,
+            id: 9, nome: "Casaco courino/Casaco la batida", categoria: "Jaquetas", descricao: "", preco: 299.90,
             imagens: ["./assets/Casaco courino.jpg", "./assets/Casaco la batida.jpg"]
         },
         {
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
             id: 14, nome: "Calça moletom", categoria: "Calças", descricao: "", preco: 210.00,
-            imagens: ["./assets/Blusa moletom.jpg", "./assets/Calça moletom1.jpg", "./assets/.jpg"]
+            imagens: ["./assets/Blusa moletom.jpg", "./assets/Calça moletom1.jpg",]
         },
         {
             id: 15, nome: "Blusa moletom", categoria: "Blusas de frio", descricao: "", preco: 189.90,

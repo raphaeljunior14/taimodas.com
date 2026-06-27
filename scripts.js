@@ -145,18 +145,36 @@ document.addEventListener("DOMContentLoaded", () => {
         productsContainer.innerHTML = filtrados.map(p => `
 
             <div class="product-card" data-id="${p.id}">
+         
                 <img src="${p.imagens[0]}" class="product-img">
                 
                 <div class="product-images-nav">${p.imagens.map((img, i) => `<img src="${img}" class="thumb-img 
                 ${i === 0 ? 'active' : ''}" onclick="changeImg(this, '${img}')">`).join('')}</div>
                 
                 <div class="product-info">
+            
                     <h3>${p.nome}</h3>
 
+                <p class="product-description">${p.descricao}
+                
+                    ${p.id === 1 ? "preta" :
+                     p.id === 2 ? "azul" :
+                     p.id === 3 ? "marrom" :
+                     p.id === 4 ? "" :
+                     p.id === 5 ? "" :
+                     p.id === 6 ? "" :
+                     p.id === 7 ? "" :
+                     p.id === 8 ? "" :
+                     p.id === 9 ? "" :
+                     p.id === 10 ? "" :
+                     p.id === 11 ? "" :
+                     p.id === 12 ? "" :
+                     p.id === 13 ? "" :
+                     p.id === 14 ? "" :
+                     p.id === 15 ? "" : ""}
 
+                </p>
                
-               
-                       
                    
                  <div class="size-selector" data-selected-size="">
 
@@ -186,6 +204,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     </div>
                      
                  
+
+
                     <p class="product-price">${formatarMoeda(p.preco)}</p>
                     <button class="product-button">Adicionar ao Carrinho</button>
                 </div>

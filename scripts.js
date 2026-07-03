@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         {
             id: 5, nome: "Blusas alongadas", categoria: "blusas de frio", descricao: "", preco: 169.90,
-            imagens: ["./assets/Blusa alongada.jpg", "./assets/Blusa alongada1.jpg", "./assets/Blusa alongada2.jpg", "./assets/Blusa alongada3.jpg"]
+            imagens: ["./assets/Blusa alongada.jpg", "./assets/Blusa alongada1.jpg","./assets/Blusa alongada2.jpg", "./assets/Blusa alongada3.jpg"]
         },
 
         {

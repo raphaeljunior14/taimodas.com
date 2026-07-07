@@ -70,8 +70,8 @@ document.addEventListener("DOMContentLoaded", () => {
             imagens: ["./assets/jaqueta de couro.jpg", "./assets/jaqueta em couro PU.jpg"]
         },
         {
-            id: 11, nome: "Jaqueta veludo", categoria: "Jaquetas", descricao: "", preco: 329.90,
-            imagens: ["./assets/jaqueta veludo.jpg", "./assets/jaqueta white.jpg"]
+            id: 11, nome: "Moletom urso", categoria: "Blusas de frio", descricao: "", preco: 149.90,
+            imagens: ["./assets/moletom urso1.jpg", "./assets/moletom urso 2.jpg", "./assets/moletom urso 3.jpg"]
         },
         {
             id: 12, nome: "Mini saia ", categoria: "Saia", descricao: "", preco: 179.90,
@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
             id: 13, nome: "Parka", categoria: "Jaquetas", descricao: "", preco: 239.90,
-            imagens: ["./assets/Parka la batida.jpg", "./assets/Parka la batida1.jpg"]
+            imagens: ["./assets/Parka la batida.jpg"]
         },
         {
             id: 14, nome: "Calça moletom", categoria: "Calças", descricao: "", preco: 210.00,
@@ -167,11 +167,11 @@ document.addEventListener("DOMContentLoaded", () => {
                      p.id === 8 ? "Preto/marrom" :
                      p.id === 9 ? "Marrom/bege/preto" :
                      p.id === 10 ? "Marrom/preta/vinho" :
-                     p.id === 11 ? "" :
+                     p.id === 11 ? "Off white" :
                      p.id === 12 ? "Preto/marrom" :
                      p.id === 13 ? "off white" :
-                     p.id === 14 ? "" :
-                     p.id === 15 ? "" : ""}
+                     p.id === 14 ? "Preto/azul/verde militar" :
+                     p.id === 15 ? "Preto/azul/verde militar" : ""}
 
                 </p>
                
@@ -187,7 +187,7 @@ document.addEventListener("DOMContentLoaded", () => {
                          </p>${p.descricao}</p>` : ''}
         
 
-                       ${(p.id === 1 ||p.id === 3 ||p.id === 4 || p.id === 8 ||  p.id === 10 || p.id === 11 ||p.id === 14 || p.id === 15  ) ?
+                       ${(p.id === 1 ||p.id === 3 ||p.id === 4 || p.id === 8 ||  p.id === 10  ||p.id === 14 || p.id === 15  ) ?
                 `<button class="size-btn" onclick="selectSize(this,'P')">P</button>
                         <button class="size-btn" onclick="selectSize(this, 'M')">M</button>
                         <button class="size-btn" onclick="selectSize(this, 'G')">G</button>
@@ -209,7 +209,7 @@ document.addEventListener("DOMContentLoaded", () => {
                        
                        <p>${p.descricao}</p>` : ''}
 
-                             ${(p.id ===5 || p.id === 7|| p.id === 13  ) ?
+                             ${(p.id ===5 || p.id === 7|| p.id === 11 || p.id === 13  ) ?
                 `<button class="size-btn" onclick="selectSize(this,'UNICO')">UNICO</button>
                       
                        

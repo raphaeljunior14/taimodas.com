@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
             id: 9, nome: "Casaco la batida", categoria: "Jaquetas", descricao: "", preco: 379.90,
-            imagens: ["./assets/Casaco la btd.jpg","./assets/Casaco la batida.jpg","./assets/Casaco la batida1.jpg"]
+            imagens: ["./assets/Casaco la btd.jpg","./assets/Casaco la batida.jpg","./assets/casaco la batida1.jpg"]
         },
         {
             id: 10, nome: "Jaqueta em couro Pu", categoria: "Jaquetas", descricao: "", preco: 299.90,

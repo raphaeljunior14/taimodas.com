@@ -249,7 +249,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    const atualizarFormulario = (tipo) => {
+    const atualizarFormulario = (tipo) =>{
         tipoEntregaAtivo = tipo;
         formContainer.innerHTML = tipo === "delivery" ? `
             <div class="form-group"><label>Nome Completo</label><input type="text" id="cust-name"></div>

@@ -25,36 +25,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const produtos = [
         {
-            id: 1, nome: "Calça legguing ", categoria: "Calças", descricao: "", preco: 119.90,
+            id: 1, nome: "Calça legguing ", categoria: "Calças", descricao: "", preco: 89.90,
             imagens: ["./assets/Calça legguing pezinho1.jpg", "./assets/Calça legguing pezinho3.jpg", "./assets/Calça legguing pezinho black.jpg", "./assets/Calça legguing pezinho2.jpg"]
         },
 
         {
-            id: 2, nome: "Calça Jeans", categoria: "Calças", descricao: "", preco: 129.90, imagens:
-                ["./assets/Calça jeans1.jpg", "./assets/Calça jeans2.jpg", "./assets/Calça jeans3.jpg"]
+            id: 2, nome: "Calça Jeans", categoria: "Calças", descricao: "", preco: 249.90, imagens:
+                ["./assets/Calça jeans1.jpg","./assets/Calça jeans3.jpg"]
         },
 
         {
-            id: 3, nome: "Calça courino ", categoria: "Calças", descricao: "", preco: 119.90,
+            id: 3, nome: "Calça courino ", categoria: "Calças", descricao: "", preco: 149.90,
             imagens: ["./assets/Calça legguing courino2.jpg", "./assets/Calça legguing courino1.jpg", "./assets/Calça courino.jpg", "./assets/Calça legguing black.jpg"]
         },
         {
-            id: 4, nome: "Conjuntos camurça", categoria: "Conjuntos", descricao: "", preco: 239.90,
-            imagens: ["./assets/Conjunto.jpg", "./assets/Conjunto camurça.jpg", "./assets/Conjunto black.jpg"]
+            id: 4, nome: "Conjunto moletom", categoria: "Conjuntos", descricao: "", preco: 299.90,
+            imagens: ["./assets/Conjunto.jpg","./assets/Conjunto white.jpg", "./assets/Conjunto white.jpg"]
         },
 
 
         {
-            id: 5, nome: "Blusas alongadas", categoria: "blusas de frio", descricao: "", preco: 169.90,
-            imagens: ["./assets/Blusa alongada.jpg", "./assets/Blusa alongada1.jpg","./assets/Blusa alongada2.jpg", "./assets/Blusa alongada3.jpg"]
+            id: 5, nome: "Blusa alongada", categoria: "blusas de frio", descricao: "", preco: 169.90,
+            imagens: ["./assets/Blusa alongada.jpg", "./assets/Blusa alongada...jpg"]
         },
 
         {
-            id: 6, nome: "Conjuntos ponche", categoria: "Conjuntos", descricao: "", preco: 239.90,
-            imagens: ["./assets/Conjunto white.jpg", "./assets/Conjunto white.jpg", "./assets/Conjunto ponche.jpg", "./assets/Conjunto ponche1.jpg"]
+            id: 6, nome: "Conjunto moletom oversized", categoria: "Conjuntos", descricao: "", preco: 369.90,
+            imagens: ["./assets/Conjunto ponche.jpg", "./assets/Conjunto ponche1.jpg"]
         },
         {
-            id: 7, nome: "Blusas poliamida ", categoria: "Blusas de frio", descricao: "", preco: 119.90,
+            id: 7, nome: "Blusa cropped poliamida ", categoria: "Blusas de frio", descricao: "", preco: 119.90,
             imagens: ["./assets/Blusa poliamida com laço.jpg", "./assets/Blusa poliamida com laço1.jpg"]
         },
         {
@@ -62,8 +62,8 @@ document.addEventListener("DOMContentLoaded", () => {
             imagens: ["./assets/Calça virginia1.jpg", "./assets/Calça virginia2.jpg"]
         },
         {
-            id: 9, nome: "Casaco courino/Casaco la batida", categoria: "Jaquetas", descricao: "", preco: 299.90,
-            imagens: ["./assets/Casaco courino.jpg", "./assets/Casaco la batida.jpg"]
+            id: 9, nome: "Casaco la batida", categoria: "Jaquetas", descricao: "", preco: 379.90,
+            imagens: ["./assets/Casaco la batida.jpg","./assets/Casaco la batida1.jpg"]
         },
         {
             id: 10, nome: "Jaqueta em couro Pu", categoria: "Jaquetas", descricao: "", preco: 299.90,
@@ -78,8 +78,8 @@ document.addEventListener("DOMContentLoaded", () => {
             imagens: ["./assets/Mini saia1.jpg", "./assets/Mini saia.jpg", "./assets/Mini saia2.jpg", "./assets/Mini saia3.jpg"]
         },
         {
-            id: 13, nome: "Vestido longo", categoria: "Vestidos", descricao: "", preco: 149.90,
-            imagens: ["./assets/Vestido longo1.jpg", "./assets/vestido longo2.jpg"]
+            id: 13, nome: "Parka", categoria: "Jaquetas", descricao: "", preco: 239.90,
+            imagens: ["./assets/Parka la batida.jpg", "./assets/Parka la batida1.jpg"]
         },
         {
             id: 14, nome: "Calça moletom", categoria: "Calças", descricao: "", preco: 210.00,
@@ -157,19 +157,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 <p class="product-description">${p.descricao}
                 
-                    ${p.id === 1 ? "preta" :
-                     p.id === 2 ? "azul" :
-                     p.id === 3 ? "marrom" :
-                     p.id === 4 ? "" :
-                     p.id === 5 ? "" :
-                     p.id === 6 ? "" :
-                     p.id === 7 ? "" :
-                     p.id === 8 ? "" :
-                     p.id === 9 ? "" :
-                     p.id === 10 ? "" :
+                    ${p.id === 1 ? "Preta/marrom" :
+                     p.id === 2 ? "Azul" :
+                     p.id === 3 ? "Marrom/preta" :
+                     p.id === 4 ? "Marsala/off white/preto" :
+                     p.id === 5 ? "Preto/bege" :
+                     p.id === 6 ? "Preto" :
+                     p.id === 7 ? "Marrom/preto/off white" :
+                     p.id === 8 ? "Preto/marrom" :
+                     p.id === 9 ? "Marrom/bege/preto" :
+                     p.id === 10 ? "Marrom/preta/vinho" :
                      p.id === 11 ? "" :
-                     p.id === 12 ? "" :
-                     p.id === 13 ? "" :
+                     p.id === 12 ? "Preto/marrom" :
+                     p.id === 13 ? "off white" :
                      p.id === 14 ? "" :
                      p.id === 15 ? "" : ""}
 
@@ -179,7 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
                  <div class="size-selector" data-selected-size="">
 
 
-     ${(p.id === 1 || p.id === 2 || p.id === 3 || p.id === 8 || p.id === 9  ) ?
+     ${( p.id === 2  ) ?
                 `<button class="size-btn" onclick="selectSize(this,'38')">38</button>
                         <button class="size-btn" onclick="selectSize(this, '40')">40</button>
                         <button class="size-btn" onclick="selectSize(this, '42')">42</button><p "
@@ -187,7 +187,7 @@ document.addEventListener("DOMContentLoaded", () => {
                          </p>${p.descricao}</p>` : ''}
         
 
-                       ${(p.id === 4 || p.id === 5 || p.id === 6 || p.id === 7 || p.id === 10 || p.id === 11 || p.id === 12 || p.id === 14 || p.id === 15  ) ?
+                       ${(p.id === 1 ||p.id === 3 ||p.id === 4 || p.id === 8 ||  p.id === 10 || p.id === 11 ||p.id === 14 || p.id === 15  ) ?
                 `<button class="size-btn" onclick="selectSize(this,'P')">P</button>
                         <button class="size-btn" onclick="selectSize(this, 'M')">M</button>
                         <button class="size-btn" onclick="selectSize(this, 'G')">G</button>
@@ -195,10 +195,23 @@ document.addEventListener("DOMContentLoaded", () => {
                        ><p>${p.descricao}</p>` : ''}
         
                        
-                       ${(p.id === 13 ) ?
+                       ${(p.id === 12   ) ?
                 `<button class="size-btn" onclick="selectSize(this,'P')">P</button>
                         <button class="size-btn" onclick="selectSize(this, 'M')">M</button>
                         <button class="size-btn" onclick="selectSize(this, 'G')">G</button>
+                       
+                       <p>${p.descricao}</p>` : ''}
+
+                               ${(p.id ===6 ) ?
+                `<button class="size-btn" onclick="selectSize(this,'M')">M</button>
+                        <button class="size-btn" onclick="selectSize(this, 'G')">G</button>
+                        <button class="size-btn" onclick="selectSize(this, 'GG')">GG</button>
+                       
+                       <p>${p.descricao}</p>` : ''}
+
+                             ${(p.id ===5 || p.id === 7|| p.id === 13  ) ?
+                `<button class="size-btn" onclick="selectSize(this,'UNICO')">UNICO</button>
+                      
                        
                        <p>${p.descricao}</p>` : ''}
                     </div>

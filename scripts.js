@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         {
             id: 5, nome: "Blusas alongadas", categoria: "blusas de frio", descricao: "", preco: 169.90,
-            imagens: ["./assets/Blusa alongada.jpg", "./assets/Blusa alongada1.jpg", "./assets/Blusa alongada2.jpg", "./assets/Blusa alongada3.jpg"]
+            imagens: ["./assets/Blusa alongada.jpg", "./assets/Blusa alongada1.jpg","./assets/Blusa alongada2.jpg", "./assets/Blusa alongada3.jpg"]
         },
 
         {
@@ -278,7 +278,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!nome) return alert("Preencha seu nome!");
         const itensMsg = carrinho.map(i => `- ${i.qtd}x ${i.nome} (${i.tamanho})`).join('\n');
         const msg = `*Tai Modas - NOVO PEDIDO*\nwww.taimodas.com\nCliente: ${nome}\nTotal: ${totalElem.innerText}\nItens:\n${itensMsg}`;
-        window.open(`https://wa.me/556293275790?text=${encodeURIComponent(msg)}`);
+        window.open(`https://wa.me/5515998494383?text=${encodeURIComponent(msg)}`);
     };
 
     renderProdutos();

@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
             id: 11, nome: "Moletom urso", categoria: "Blusas de frio", descricao: "", preco: 149.90,
-            imagens: ["./assets/moletom urso1.jpg", "./assets/moletom urso 2.jpg", "./assets/moletom urso 3.jpg"]
+            imagens: ["./assets/moletom urso.jpg", "./assets/moletom urso1.jpg", "./assets/moletom urso 2.jpg", "./assets/moletom urso 3.jpg"]
         },
         {
             id: 12, nome: "Mini saia ", categoria: "Saia", descricao: "", preco: 179.90,
@@ -85,10 +85,15 @@ document.addEventListener("DOMContentLoaded", () => {
             id: 14, nome: "Calça moletom", categoria: "Calças", descricao: "", preco: 210.00,
             imagens: ["./assets/Blusa moletom.jpg", "./assets/Calça moletom1.jpg",]
         },
+
         {
             id: 15, nome: "Blusa moletom", categoria: "Blusas de frio", descricao: "", preco: 189.90,
             imagens: ["./assets/Blusa moletom1.jpg", "./assets/Conjunto moletom1.jpg"]
         },
+         {
+          id: 16, nome: "Bolsa", categoria: "Bolsas", descricao: "", preco: 249.90,
+            imagens: ["./assets/Bolsa luz da lua.jpg"]
+         },
       
     ];
 
@@ -171,7 +176,8 @@ document.addEventListener("DOMContentLoaded", () => {
                      p.id === 12 ? "Preto/marrom" :
                      p.id === 13 ? "off white" :
                      p.id === 14 ? "Preto/azul/verde militar" :
-                     p.id === 15 ? "Preto/azul/verde militar" : ""}
+                     p.id === 15 ? "Preto/azul/verde militar" :
+                     p.id === 16 ? "Mocaa/preta" : ""}
 
                 </p>
                
@@ -209,7 +215,7 @@ document.addEventListener("DOMContentLoaded", () => {
                        
                        <p>${p.descricao}</p>` : ''}
 
-                             ${(p.id ===5 || p.id === 7|| p.id === 11 || p.id === 13  ) ?
+                             ${(p.id ===5 || p.id === 7|| p.id === 11 || p.id === 13|| p.id === 16   ) ?
                 `<button class="size-btn" onclick="selectSize(this,'UNICO')">UNICO</button>
                       
                        

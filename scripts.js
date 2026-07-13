@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
          {
           id: 19, nome: "Vestido couro PU", categoria: "Vestidos", descricao: "", preco: 199.90,
-            imagens: ["./assets2/Vestido couro PU.jpg","./assets2/Vestido couro PU2.jpg","./assets2/Vestido couro PU3.jpg","./assets2/Vestido couro PU4.jpg"]
+            imagens: ["./assets2/vestido couro PU.jpg","./assets2/vestido couro PU2.jpg","./assets2/vestido couro PU3.jpg","./assets2/vestido couro PU4.jpg"]
          },
       
       

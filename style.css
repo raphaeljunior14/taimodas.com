@@ -281,11 +281,11 @@ hero-tag {
 .category-btn {
   display: flex;
   align-items: center;
-  gap: 0.9rem;
+  gap: 0.7rem;
   background: transparent;
   border: 1px solid rgba(206, 212, 114, 0.712);
   color: #ffff;
-  padding: 10px 30px;
+  padding: 5px 20px;
   border-radius: 80px;
   cursor: pointer;
   white-space: nowrap;
@@ -297,7 +297,7 @@ hero-tag {
 }
 
 .category-btn i {
-  font-size: 0.5rem;
+  font-size: 0.8rem;
 }
 
 .category-btn.active {

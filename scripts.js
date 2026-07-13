@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
       
          {
           id: 20, nome: "Conjunto Ana", categoria: "Conjuntos", descricao: "", preco: 239.90,
-            imagens: ["./assets2/conjunto ana.jpg","./assets2/conjunto ana2.jpg","./assets2/conjunto ana3.jpg","./assets2/conjunto ana4.jpg"]
+            imagens: ["./assets2/conjunto Ana.jpg","./assets2/conjunto Ana2.jpg","./assets2/conjunto Ana3.jpg","./assets2/conjunto Ana4.jpg"]
          },
       
     ];

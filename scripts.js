@@ -98,23 +98,23 @@ document.addEventListener("DOMContentLoaded", () => {
          ,
          {
           id: 17, nome: "Macacão canelado", categoria: "Conjuntos", descricao: "", preco: 199.90,
-            imagens: ["./assets/Bolsa luz da lua.jpg","./assets/Bolsa luz da lua.jpg","./assets/Bolsa luz da lua.jpg","./assets/Bolsa luz da lua.jpg"]
+            imagens: ["./assets2/macacão canelado.jpg","./assets2/macacão canelado2.jpg","./assets2/macacão canelado3.jpg","./assets2/macacão canelado4.jpg"]
          },
       
          {
           id: 18, nome: "Conjunto Havana", categoria: "Conjuntos", descricao: "", preco: 219.90,
-            imagens: ["./assets/Bolsa luz da lua.jpg","./assets/Bolsa luz da lua.jpg","./assets/Bolsa luz da lua.jpg","./assets/Bolsa luz da lua.jpg"]
+            imagens: ["./assets2/conjunto havana.jpg","./assets2/conjunto havana2.jpg","./assets2/conjunto havana3.jpg","./assets2/conjunto havana4.jpg"]
          },
 
          {
           id: 19, nome: "Vestido couro PU", categoria: "Vestidos", descricao: "", preco: 199.90,
-            imagens: ["./assets/Bolsa luz da lua.jpg","./assets/Bolsa luz da lua.jpg","./assets/Bolsa luz da lua.jpg","./assets/Bolsa luz da lua.jpg"]
+            imagens: ["./assets2/Vestido couro PU.jpg","./assets2/Vestido couro PU2.jpg","./assets2/Vestido couro PU3.jpg","./assets2/Vestido couro PU4.jpg"]
          },
       
       
          {
           id: 20, nome: "Conjunto Ana", categoria: "Conjuntos", descricao: "", preco: 239.90,
-            imagens: ["./assets/Bolsa luz da lua.jpg","./assets/Bolsa luz da lua.jpg","./assets/Bolsa luz da lua.jpg","./assets/Bolsa luz da lua.jpg"]
+            imagens: ["./assets2/conjunto ana.jpg","./assets2/conjunto ana2.jpg","./assets2/conjunto ana3.jpg","./assets2/conjunto ana4.jpg"]
          },
       
     ];
@@ -199,7 +199,13 @@ document.addEventListener("DOMContentLoaded", () => {
                      p.id === 13 ? "off white" :
                      p.id === 14 ? "Preto/azul/verde militar" :
                      p.id === 15 ? "Preto/azul/verde militar" :
-                     p.id === 16 ? "Mocaa/preta" : ""}
+                     p.id === 16 ? "Mocaa/preta" : 
+                     p.id === 17 ? "Marrom/preto" : 
+                     p.id === 18 ? "Marsala" : 
+                     p.id === 19 ? "Vinho/preto/azul/verde" : 
+                     p.id === 20 ? "Azul marinho/marsala" : 
+                     
+                     ""}
 
                 </p>
                
@@ -230,6 +236,14 @@ document.addEventListener("DOMContentLoaded", () => {
                        
                        <p>${p.descricao}</p>` : ''}
 
+
+                                   ${(p.id ===19 ) ?
+                `<button class="size-btn" onclick="selectSize(this,'M')">M</button>
+                        <button class="size-btn" onclick="selectSize(this, 'G')">G</button>
+                    
+                       
+                       <p>${p.descricao}</p>` : ''}
+
                                ${(p.id ===6 ) ?
                 `<button class="size-btn" onclick="selectSize(this,'M')">M</button>
                         <button class="size-btn" onclick="selectSize(this, 'G')">G</button>
@@ -237,7 +251,7 @@ document.addEventListener("DOMContentLoaded", () => {
                        
                        <p>${p.descricao}</p>` : ''}
 
-                             ${(p.id ===5 || p.id === 7|| p.id === 11 || p.id === 13|| p.id === 16   ) ?
+                             ${(p.id ===5 || p.id === 7|| p.id === 11 || p.id === 13|| p.id === 16  || p.id === 17   || p.id === 18|| p.id === 20   ) ?
                 `<button class="size-btn" onclick="selectSize(this,'UNICO')">UNICO</button>
                       
                        

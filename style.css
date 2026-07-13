@@ -291,7 +291,7 @@ hero-tag {
   white-space: nowrap;
   /* IMPRESCINDÍVEL: Impede o texto de quebrar linha */
   font-size: 1rem;
-  font-weight: 50px;
+  font-weight: 51px;
   transition: 0.3s;
 
 }

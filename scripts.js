@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
             imagens: ["./assets/Conjunto ponche.jpg", "./assets/Conjunto ponche1.jpg"]
         },
         {
-            id: 7, nome: "Blusa cropped poliamida ", categoria: "Blusas de frio", descricao: "", preco: 119.90,
+            id: 7, nome: "Blusa cropped poliamida ", categoria: "Blusas", descricao: "", preco: 119.90,
             imagens: ["./assets/Blusa poliamida com laço.jpg", "./assets/Blusa poliamida com laço1.jpg"]
         },
         {

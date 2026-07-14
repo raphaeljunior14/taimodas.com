@@ -251,7 +251,7 @@ document.addEventListener("DOMContentLoaded", () => {
                        
                        <p>${p.descricao}</p>` : ''}
 
-                             ${(p.id ===5 || p.id === 7|| p.id === 11 || p.id === 13|| p.id === 16  || p.id === 17   || p.id === 18|| p.id === 20   ) ?
+                             ${(p.id ===5 || p.id === 7|| p.id === 11 || p.id === 13|| p.id === 16 || p.id === 17 || p.id === 18 || p.id === 20   ) ?
                 `<button class="size-btn" onclick="selectSize(this,'UNICO')">UNICO</button>
                       
                        

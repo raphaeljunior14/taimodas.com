@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
             imagens: ["./assets/Bolsa luz da lua.jpg"]
          },
       
-         ,
+         
          {
           id: 17, nome: "Macacão canelado", categoria: "Conjuntos", descricao: "", preco: 199.90,
             imagens: ["./assets2/macacão canelado.jpg","./assets2/macacão canelado2.jpg","./assets2/macacão canelado3.jpg","./assets2/macacão canelado4.jpg"]

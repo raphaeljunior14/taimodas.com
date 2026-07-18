@@ -807,17 +807,15 @@ align-items: center;
   color: #64748b;
 }
 
+/* Responsividade header */
   @media (max-width: 680px){
-
 
 header{display:block;}
 .categories-container{display:none;}
 .social-panel{display:flex;
 justify-content:center;}
-
 }
   
- 
 
 /* Responsividade do Footer */
 @media (max-width: 780px) {

@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
          },
                {
             id: 2, nome: "Blusa gola poliamida", categoria: "Blusas", descricao: "", preco: 109.90,
-            imagens: ["./assets2/Blusa poliamida1.jpg", "./assets2/Blusa poliamida2.jpg"]
+            imagens: ["./assets2/blusa poliamida1.jpg", "./assets2/blusa poliamida2.jpg"]
         },
         {
             id: 3, nome: "Camisa cropped", categoria: "Blusas", descricao: "", preco: 189.90,

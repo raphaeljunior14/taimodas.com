@@ -24,31 +24,29 @@ document.addEventListener("DOMContentLoaded", () => {
     window.closeAlert = () => document.getElementById('custom-alert').classList.remove('show');
 
     const produtos = [
+         {
+          id: 1, nome: "Vestido couro PU", categoria: "Vestidos", descricao: "", preco: 219.90,
+            imagens: ["./assets2/vestido couro PU1.jpg","./assets2/vestido couro PU5.jpg","./assets2/vestido couro PU6.jpg","./assets2/vestido couro PU7.jpg"]
+         },
+               {
+            id: 2, nome: "Blusa gola poliamida", categoria: "Blusas", descricao: "", preco: 109.90,
+            imagens: ["./assets2/Blusa poliamida1.jpg", "./assets2/Blusa poliamida2.jpg"]
+        },
         {
-            id: 1, nome: "Calça legguing ", categoria: "Calças", descricao: "", preco: 89.90,
-            imagens: ["./assets/Calça legguing pezinho1.jpg", "./assets/Calça legguing pezinho3.jpg", "./assets/Calça legguing pezinho black.jpg", "./assets/Calça legguing pezinho2.jpg"]
+            id: 3, nome: "Camisa cropped", categoria: "Blusas", descricao: "", preco: 189.90,
+            imagens: ["./assets2/camisa cropped1.jpg", "./assets2/camisa cropped2.jpg", "./assets2/camisa cropped3.jpg", "./assets2/camisa cropped4.jpg","./assets2/camisa cropped5.jpg"]
         },
 
         {
-            id: 2, nome: "Calça Jeans", categoria: "Calças", descricao: "", preco: 249.90, imagens:
-                ["./assets/Calça jeans1.jpg","./assets/Calça jeans3.jpg"]
+            id: 4, nome: "Camisa Poa", categoria: "Blusas", descricao: "", preco: 139.90,
+            imagens: ["./assets2/camisa poa1.jpg","./assets2/camisa poa2.jpg"]
         },
-
-        {
-            id: 3, nome: "Calça courino ", categoria: "Calças", descricao: "", preco: 149.90,
-            imagens: ["./assets/Calça legguing courino2.jpg", "./assets/Calça legguing courino1.jpg", "./assets/Calça courino.jpg", "./assets/Calça legguing black.jpg"]
-        },
-        {
-            id: 4, nome: "Conjunto moletom", categoria: "Conjuntos", descricao: "", preco: 299.90,
-            imagens: ["./assets/Conjunto.jpg","./assets/Conjunto white.jpg", "./assets/Conjunto white.jpg"]
-        },
-
-
-        {
-            id: 5, nome: "Blusa alongada", categoria: "blusas de frio", descricao: "", preco: 169.90,
-            imagens: ["./assets/Blusa alongada.jpg", "./assets/Blusa alongada...jpg"]
-        },
-
+  {
+          id: 5, nome: "Macacão canelado", categoria: "Conjuntos", descricao: "", preco: 199.90,
+            imagens: ["./assets2/macacão4.jpg","./assets2/macacão5.jpg","./assets2/macacão6.jpg","./assets2/macacão canelado.jpg","./assets2/macacão canelado2.jpg","./assets2/macacão canelado3.jpg"]
+         },
+      
+    
         {
             id: 6, nome: "Conjunto moletom oversized", categoria: "Conjuntos", descricao: "", preco: 369.90,
             imagens: ["./assets/Conjunto ponche.jpg", "./assets/Conjunto ponche1.jpg"]
@@ -57,6 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: 7, nome: "Blusa cropped poliamida", categoria: "Blusas", descricao: "", preco: 119.90,
             imagens: ["./assets/Blusa poliamida com laço.jpg", "./assets/Blusa poliamida com laço1.jpg"]
         },
+    
         {
             id: 8, nome: "Calças virginia", categoria: "Calças", descricao: "", preco: 99.90,
             imagens: ["./assets/Calça virginia1.jpg", "./assets/Calça virginia2.jpg"]
@@ -67,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
             id: 10, nome: "Jaqueta em couro Pu", categoria: "Jaquetas", descricao: "", preco: 299.90,
-            imagens: ["./assets/jaqueta de couro.jpg", "./assets/jaqueta em couro PU.jpg"]
+            imagens: ["./assets2/jaqueta couro PU3.jpg","./assets/jaqueta de couro.jpg", "./assets/jaqueta em couro PU.jpg"]
         },
         {
             id: 11, nome: "Moletom urso", categoria: "Blusas de frio", descricao: "", preco: 149.90,
@@ -95,12 +94,12 @@ document.addEventListener("DOMContentLoaded", () => {
             imagens: ["./assets/Bolsa luz da lua.jpg"]
          },
       
-         
          {
-          id: 17, nome: "Macacão canelado", categoria: "Conjuntos", descricao: "", preco: 199.90,
-            imagens: ["./assets2/macacão canelado.jpg","./assets2/macacão canelado2.jpg","./assets2/macacão canelado3.jpg","./assets2/macacão canelado4.jpg"]
-         },
-      
+            id: 17, nome: "Blusa alongada", categoria: "blusas de frio", descricao: "", preco: 169.90,
+            imagens: ["./assets/Blusa alongada.jpg", "./assets/Blusa alongada...jpg"]
+        },
+
+    
          {
           id: 18, nome: "Conjunto Havana", categoria: "Conjuntos", descricao: "", preco: 219.90,
             imagens: ["./assets2/conjunto havana.jpg","./assets2/conjunto havana2.jpg","./assets2/conjunto havana3.jpg","./assets2/conjunto havana4.jpg"]
@@ -116,7 +115,26 @@ document.addEventListener("DOMContentLoaded", () => {
           id: 20, nome: "Conjunto Ana", categoria: "Conjuntos", descricao: "", preco: 239.90,
             imagens: ["./assets2/conjunto Ana.jpg","./assets2/conjunto Ana2.jpg","./assets2/conjunto Ana3.jpg","./assets2/conjunto Ana4.jpg"]
          },
-      
+       {
+            id: 21, nome: "Calça legguing ", categoria: "Calças", descricao: "", preco: 89.90,
+            imagens: ["./assets/Calça legguing pezinho1.jpg", "./assets/Calça legguing pezinho3.jpg", "./assets/Calça legguing pezinho black.jpg", "./assets/Calça legguing pezinho2.jpg"]
+        },
+
+ {
+            id: 22, nome: "Calça Jeans", categoria: "Calças", descricao: "", preco: 249.90, imagens:
+                ["./assets/Calça jeans1.jpg","./assets/Calça jeans3.jpg"]
+        },
+
+
+             {
+            id: 23, nome: "Calça courino ", categoria: "Calças", descricao: "", preco: 149.90,
+            imagens: ["./assets/Calça legguing courino2.jpg", "./assets/Calça legguing courino1.jpg", "./assets/Calça courino.jpg", "./assets/Calça legguing black.jpg"]
+        },
+          {
+            id: 24, nome: "Conjunto moletom", categoria: "Conjuntos", descricao: "", preco: 299.90,
+            imagens: ["./assets/Conjunto.jpg","./assets/Conjunto white.jpg", "./assets/Conjunto white.jpg"]
+        },
+
     ];
 
 
@@ -184,11 +202,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 <p class="product-description">${p.descricao}
                 
-                    ${p.id === 1 ? "Preta/marrom" :
-                     p.id === 2 ? "Azul" :
-                     p.id === 3 ? "Marrom/preta" :
-                     p.id === 4 ? "Marsala/off white/preto" :
-                     p.id === 5 ? "Preto/bege" :
+                    ${p.id === 1 ? "Verde militar" :
+                     p.id === 2 ? "Marrom/off white/preta/azul" :
+                     p.id === 3 ? "verde militar/off white/marrom" :
+                     p.id === 4 ? "Off white/preta" :
+                     p.id === 5 ? "Marrom/preto" :
                      p.id === 6 ? "Preto" :
                      p.id === 7 ? "Marrom/preto/off white" :
                      p.id === 8 ? "Preto/marrom" :
@@ -200,11 +218,14 @@ document.addEventListener("DOMContentLoaded", () => {
                      p.id === 14 ? "Preto/azul/verde militar" :
                      p.id === 15 ? "Preto/azul/verde militar" :
                      p.id === 16 ? "Mocaa/preta" : 
-                     p.id === 17 ? "Marrom/preto" : 
+                     p.id === 17 ? "Preto/bege" : 
                      p.id === 18 ? "Marsala" : 
                      p.id === 19 ? "Vinho/preto/azul/verde" : 
                      p.id === 20 ? "Azul marinho/marsala" : 
-                     
+                     p.id === 21 ? "Preto/azul" : 
+                    p.id === 22 ? "Azul" : 
+                    p.id === 23 ? "Marrom/preta" : 
+                    p.id === 24 ? "Marsala/off white/preto": 
                      ""}
 
                 </p>
@@ -213,7 +234,7 @@ document.addEventListener("DOMContentLoaded", () => {
                  <div class="size-selector" data-selected-size="">
 
 
-     ${( p.id === 2  ) ?
+     ${( p.id === 22  ) ?
                 `<button class="size-btn" onclick="selectSize(this,'38')">38</button>
                         <button class="size-btn" onclick="selectSize(this, '40')">40</button>
                         <button class="size-btn" onclick="selectSize(this, '42')">42</button><p "
@@ -221,7 +242,7 @@ document.addEventListener("DOMContentLoaded", () => {
                          </p>${p.descricao}</p>` : ''}
         
 
-                       ${(p.id === 1 ||p.id === 3 ||p.id === 4 || p.id === 8 ||  p.id === 10  ||p.id === 14 || p.id === 15  ) ?
+                       ${( p.id === 3 ||p.id === 24 || p.id === 8 ||  p.id === 10  ||p.id === 14 || p.id === 15 || p.id === 23  ) ?
                 `<button class="size-btn" onclick="selectSize(this,'P')">P</button>
                         <button class="size-btn" onclick="selectSize(this, 'M')">M</button>
                         <button class="size-btn" onclick="selectSize(this, 'G')">G</button>
@@ -251,7 +272,7 @@ document.addEventListener("DOMContentLoaded", () => {
                        
                        <p>${p.descricao}</p>` : ''}
 
-                             ${(p.id ===5 || p.id === 7|| p.id === 11 || p.id === 13|| p.id === 16 || p.id === 17 || p.id === 18 || p.id === 20   ) ?
+                             ${(p.id ===1 ||p.id ===2 ||p.id ===4 ||p.id ===5 || p.id === 7|| p.id === 11 || p.id === 13|| p.id === 16 || p.id === 17 || p.id === 18 || p.id === 20 || p.id === 21  ) ?
                 `<button class="size-btn" onclick="selectSize(this,'UNICO')">UNICO</button>
                       
                        

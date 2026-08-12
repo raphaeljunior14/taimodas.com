@@ -272,10 +272,10 @@ hero-tag {
   /* Melhora o deslize no iPhone */
 }
 
-/* Esconde a barra de rolagem para um visual mais limpo (opcional) */
+/* Esconde a barra de rolagem para um visual mais limpo (opcional) 
 .categories-bar::-webkit-scrollbar {
   display: none;
-}
+}*/
 
 
 .category-btn {

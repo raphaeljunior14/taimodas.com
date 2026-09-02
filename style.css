@@ -52,9 +52,9 @@ h3 {
   display: inline-block;
   background-color: #25D366;
   color: white;
-  padding: 10px 10px;
-  border-radius: 20px;
-  font-size: 12px;
+  padding: 18px 18px;
+  border-radius: 15px;
+  font-size: 18px;
   text-decoration: none;
   font-weight: bold;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
@@ -811,9 +811,14 @@ align-items: center;
   @media (max-width: 680px){
 
 header{display:block;}
-.categories-container{display:none;}
+.categories-container{display:block;}
 .social-panel{display:flex;
 justify-content:center;}
+.wattsapp-btn{display:flex;
+justify-content:center;
+align-items:center;
+}
+
 }
   
 

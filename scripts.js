@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       {
             id: 23, nome: "Conjunto em linho", categoria: "Conjuntos", descricao: "", preco: 199.90,
-            imagens: ["./assets3/Conjunto linho.jpg", "./assets3/Conjunto linho2.jpg", "./assets3/Conjunto linho3.jpg"]
+            imagens: ["./assets3/conjunto linho.jpg", "./assets3/conjunto linho2.jpg", "./assets3/conjunto linho3.jpg"]
         },
 
    {

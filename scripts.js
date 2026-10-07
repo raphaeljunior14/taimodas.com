@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
          },
     
    {
-            id: 6, nome: "Conjunto moletom oversized", categoria: "Conjuntos", descricao: "", preco: 369.90,
+            id: 11, nome: "Conjunto moletom oversized", categoria: "Conjuntos", descricao: "", preco: 369.90,
             imagens: ["./assets/Conjunto ponche.jpg", "./assets/Conjunto ponche1.jpg"]
         },
 {
@@ -186,13 +186,13 @@ document.addEventListener("DOMContentLoaded", () => {
                      p.id === 2 ? "Amarelo manteiga" :
                      p.id === 3 ? "Amarelo manteiga/marrom" :
                      p.id === 4 ? "Azul bebe/Off white" :
-                     p.id === 5 ? "Marrom/preto" :
+                     p.id === 5 ? "Preto/marssala" :
                      p.id === 6 ? "Off white/azul bebe" :
                      p.id === 7 ? "Verde militar/off white" :
                      p.id === 8 ? "Marsala/off white/preto" :
                      p.id === 9 ? "Off white/Rosa bebe" :
                      p.id === 10 ? "Vinho" :
-                     p.id === 11 ? "Off white" :
+                     p.id === 11 ? "Preto/Off white" :
                      p.id === 12 ? "Preto/marrom" :
                      p.id === 13 ? "Azul marinho/marsala":
                      p.id === 14 ? "Preto/azul/verde militar" :
@@ -201,7 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
                      p.id === 17 ? "Preto/bege" : 
                      p.id === 18 ? "Marsala" : 
                      p.id === 19 ? "Vinho/preto/azul/verde" : 
-                     p.id === 20 ? "Azul marinho/marsala" : 
+                     p.id === 20 ? "Azul marinho" : 
                      p.id === 21 ? "Preto/azul" : 
                     p.id === 22 ? "Azul" : 
                     p.id === 23 ? "Off white/azul bebe" : 
